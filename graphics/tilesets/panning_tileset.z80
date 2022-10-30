@@ -1,0 +1,15 @@
+
+; panning_tileset:
+
+; size: $0010
+
+; 16 8x8 tiles
+
+	;  hy5,hy6,hy7,hy4   # (x,y)
+;	db $f8,$fa,$f8,$ff ; 3 (0,0) off
+	db $ff,$ff,$ff,$ff ; 3 (0,0) off
+	db $f8,$f9,$fa,$ff ; 1 (0,0) right
+	db $fb,$fb,$f8,$ff ; 0 (0,0) left
+	db $f8,$fb,$f8,$ff ; 2 (0,0) center
+                          
+	end
