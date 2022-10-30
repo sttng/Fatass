@@ -12,3 +12,16 @@ Good luck!
 Jeremy
 http://jeremyevers.com
 
+## From https://jeremyevers.com/fatass/
+
+Many years ago I made a Fast Tracker II clone for the Gameboy Color called Fatass. It was coded in pure z80 assembly, and was used to create music for several videogames.
+
+I originally imagined myself writing entire albums with this thing on my travels.
+
+Download it here: Fatass
+
+Download the z80 source code here: Fatass z80 source code
+
+You will need a gameboy color or gameboy advance emulator, or a flash system to use this.
+
+Press select to get to the menu, from there you can access help, the file system, etc. Load some example tunes from rom to see what it can do. There’s even a version of a Big Brother song in there…
