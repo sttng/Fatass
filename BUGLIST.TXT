@@ -1,0 +1,124 @@
+v0.14:	buglist
+
+-global:
+
+bugs:
+
+	IT'S FUCKING CRAZY ON BW GB BECAUSE It USES $D000-$DFFF, BANKS THAT THE OLD
+	GB DOES NOT HAVE!  ->PLAYER ONLY MODE ON GB?  ALSO: 	sprites in top left
+	are not drawn correctly on real gameboy pocket-could be old version of fatass.
+	-OK, AT SOME POINT i MUST CODE A PLAYER ONLY VERSION FOR GB, or possibly
+	 edit in saveram? ouch...  tbat's asking for trouble...
+
+	DOES NOT CHECK FOR things like not enough memory to load or do edit functions
+
+features/additions:
+
+	the isas version being used does not seem to compile ld x,($xx) as it used to,
+	it is now compiling as ld x,($ffxx) - only in some cases, however. weird.
+	-the cases it does it is when there is a variable name used instead of a direct
+	 ld ($ffxx),a type statement.
+	
+	it's getting close to another clean-up/optimization pass - the main code bank
+	is getting full, and some things are a bit slower than they need to be
+
+
+-editor interface:
+
+bugs:
+
+-display:
+
+	-waveform display is not perfect, it does not always trigger correctly
+	 (eg missionc) and duration stuff is not implemented.
+
+	; had a bug where the effects came up blank untill I did a copy track, even though
+	; there were lots of things there. - randy had this happen once as well... ?!
+
+	should recode ALL vram access to use a foolproof buffering method
+	-sometimes palette write to vram is bad when switching in/out of menu
+
+	had a bug where right after I turned it on, I went to the effects menu
+	and it was mangled, everything was shifted vertically. bad variable init?
+	
+-audio:
+
+	popping to menu from play means sound can get stuck on.
+
+-editor:
+
+	HMMM, SONGS WITH MACROS ARE BAD NEWS!!!!  THEY CAN CRASH THE INSERT NEW PATTERN
+	FUNCTION, AND ALSO CAN PROBABLY MESS STUFF UP BAD IN PATTERN EDIT.  ON PATTERN
+	EDIT, I SHOULD HAVE THEM PARSED AND REMOVED? I DUNNO.  FOR NOW NO MACROS, DAMNIT!
+
+
+features/additions:
+
+	MAKE TEXT SWITCHING NICER IN HELP MENU
+
+ 	stop cursor flash when thinking?
+
+	need to tweak key repeat speeds
+
+	add a way to change what track you are editing from within
+	effects editor
+
+	add a mute/solo command	thingy
+
+	add are you sure to save over/delete
+
+	add different cursor types
+
+	ADD OPTIMZE MENU
+
+	add paste track effects only
+	add paste track notes only
+
+	have it play the sample or draw the waveform on pressing B in effects menu when
+	the cursor is over it?
+
+	search and replace per channel for notes and/or effects parameters
+
+	can have optimize use the music editor routines to remove redundant effects
+	
+-file access:
+
+bugs:
+
+	if you power off while working on saveram, it mangles it
+
+features/additions:
+
+	should add a "working" type display for when it is busy
+
+	optimize could have the macro method added sometime - BUT macros are bad news
+	right now!!!!
+
+
+-plasma screen:
+
+	add a logo with dybp fill?
+
+-player:
+
+bugs:
+
+	find out why changing the volume restarts the envelope
+	find out why changing the evelope restarts the envelope
+
+	find out why autopanner clicks so damned loud - MAKE IT SO THAT IT WRITES GLOBAL
+	REGS ONLY ONCE PER PLAYER TICK!
+
+	find out why you have to restart envelope after changing waveforms
+
+	find out why it eats so much raster time on switching patterns, ie moving on to
+	the next one
+
+features/additions:
+
+	definitely add the track loop too thingy in the sequence
+
+	add a byte for player call rate->1/2 1/1 2/1, etc.
+
+	add $80 more gain shaper thingies
+

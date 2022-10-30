@@ -1,0 +1,33 @@
+INTELLIGENT SYSTEMS Linker  Version 1.25.1 for Win32
+Copyright (c) 1993-1999 Nintendo Co.,Ltd.
+Copyright (c) 1993-1999 INTELLIGENT SYSTEMS Co.,Ltd.
+output file : .\fatass.isx
+
+*** phase 1 ***
+ fatass.o
+*** phase 2 ***
+ fatass.o
+symbol:1956
+	End of [MAINCODE00] group = 0000:3F0E
+	End of [CODEOVER00] group = 0001:68EA
+	End of [GRAPHICS00] group = 0003:775B
+	End of [GRAPHICS01] group = 0004:7A1D
+	End of [GRAPHICS02] group = 0005:557F
+	End of [TEXT00] group = 0007:78B8
+	End of [SAMPLE00] group = 0008:784F
+	End of [SAMPLE01] group = 0009:7FFF
+	End of [SAMPLE02] group = 000A:7FEF
+	End of [SAMPLE03] group = 000B:7FEF
+	End of [SAMPLE04] group = 000C:7FFF
+	End of [SAMPLE05] group = 000D:7F8F
+	End of [MUSIC00] group = 0010:750C
+	End of [MUSIC01] group = 0011:7ED6
+	End of [MUSIC02] group = 0012:759F
+	End of [MUSIC03] group = 0013:78C5
+	End of [MUSIC04] group = 0014:7458
+	End of [MUSIC05] group = 0015:5639
+	End of [MUSIC06] group = 0016:56D8
+	End of [MUSIC07] group = 0017:6E7A
+	End of [MUSIC08] group = 0018:5A13
+	End of [MUSIC09] group = 0019:5BF6
+range:1053
