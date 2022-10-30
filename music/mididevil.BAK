@@ -1,0 +1,6945 @@
+;***************************************************************************
+
+mididevil_header:
+	dw mididevil_sequence-mididevil_header	; sequence index
+	dw mididevil_patterns-mididevil_header	; patterns index
+
+	db 'mididevil'					; song name
+
+mididevil_sequence:
+
+	db ctrlbt_song_speed,$40
+	db ctrlbt_panning,%11111111
+	db ctrlbt_shuffle,$40,$a3
+	db $00
+	db $01
+	db $02
+	db $03
+	db ctrlbt_shuffle,$00,$00
+	db ctrlbt_panning,%11011110
+	db $04
+	db ctrlbt_panning,%11111111
+	db $05
+	db ctrlbt_panning,%11011110
+	db $06
+	db ctrlbt_song_speed,$30
+	db ctrlbt_shuffle,$40,$33
+	db ctrlbt_panning,%11111111
+	db $07
+	db ctrlbt_shuffle,$00,$00
+	db ctrlbt_panning,%11011110
+	db ctrlbt_song_speed,$40
+	db $08
+	db $09
+	db ctrlbt_panning,%11111111
+	db $0a
+	db $0b
+	db ctrlbt_panning,%11011110
+	db $0c
+	db $0d
+	db $0e
+	db ctrlbt_panning,%11111111
+	db $0f
+	db ctrlbt_song_speed,$40
+	db ctrlbt_shuffle,$40,$c3
+	db $10
+	db ctrlbt_song_speed,$20
+	db ctrlbt_shuffle,$00,$00
+	db $11
+
+
+
+
+	db ctrlbt_track_loop
+
+
+mididevil_patterns:
+	dw mididevil_tr_1_pt_00-mididevil_patterns,mididevil_tr_2_pt_05-mididevil_patterns,mididevil_tr_3_pt_00-mididevil_patterns,mididevil_tr_4_pt_05-mididevil_patterns
+	dw mididevil_tr_1_pt_00-mididevil_patterns,mididevil_tr_2_pt_05-mididevil_patterns,mididevil_tr_3_pt_00-mididevil_patterns,mididevil_tr_4_pt_00-mididevil_patterns
+	dw mididevil_tr_1_pt_01-mididevil_patterns,mididevil_tr_2_pt_01-mididevil_patterns,mididevil_tr_3_pt_01-mididevil_patterns,mididevil_tr_4_pt_01-mididevil_patterns
+	dw mididevil_tr_1_pt_02-mididevil_patterns,mididevil_tr_2_pt_02-mididevil_patterns,mididevil_tr_3_pt_02-mididevil_patterns,mididevil_tr_4_pt_02-mididevil_patterns
+	dw mididevil_tr_1_pt_03-mididevil_patterns,mididevil_tr_2_pt_03-mididevil_patterns,mididevil_tr_3_pt_03-mididevil_patterns,mididevil_tr_4_pt_03-mididevil_patterns
+	dw mididevil_tr_1_pt_04-mididevil_patterns,mididevil_tr_2_pt_04-mididevil_patterns,mididevil_tr_3_pt_04-mididevil_patterns,mididevil_tr_4_pt_04-mididevil_patterns
+	dw mididevil_tr_1_pt_08-mididevil_patterns,mididevil_tr_2_pt_03-mididevil_patterns,mididevil_tr_3_pt_07-mididevil_patterns,mididevil_tr_4_pt_03-mididevil_patterns
+	dw mididevil_tr_1_pt_06-mididevil_patterns,mididevil_tr_2_pt_07-mididevil_patterns,mididevil_tr_3_pt_06-mididevil_patterns,mididevil_tr_4_pt_07-mididevil_patterns
+	dw mididevil_tr_1_pt_00-mididevil_patterns,mididevil_tr_2_pt_05-mididevil_patterns,mididevil_tr_3_pt_00-mididevil_patterns,mididevil_tr_4_pt_00-mididevil_patterns
+	dw mididevil_tr_1_pt_00-mididevil_patterns,mididevil_tr_2_pt_05-mididevil_patterns,mididevil_tr_3_pt_00-mididevil_patterns,mididevil_tr_4_pt_00-mididevil_patterns
+	dw mididevil_tr_1_pt_01-mididevil_patterns,mididevil_tr_2_pt_01-mididevil_patterns,mididevil_tr_3_pt_01-mididevil_patterns,mididevil_tr_4_pt_01-mididevil_patterns
+	dw mididevil_tr_1_pt_02-mididevil_patterns,mididevil_tr_2_pt_02-mididevil_patterns,mididevil_tr_3_pt_02-mididevil_patterns,mididevil_tr_4_pt_02-mididevil_patterns
+	dw mididevil_tr_1_pt_03-mididevil_patterns,mididevil_tr_2_pt_03-mididevil_patterns,mididevil_tr_3_pt_03-mididevil_patterns,mididevil_tr_4_pt_03-mididevil_patterns
+	dw mididevil_tr_1_pt_03-mididevil_patterns,mididevil_tr_2_pt_03-mididevil_patterns,mididevil_tr_3_pt_03-mididevil_patterns,mididevil_tr_4_pt_03-mididevil_patterns
+	dw mididevil_tr_1_pt_03-mididevil_patterns,mididevil_tr_2_pt_03-mididevil_patterns,mididevil_tr_3_pt_07-mididevil_patterns,mididevil_tr_4_pt_03-mididevil_patterns
+	dw mididevil_tr_1_pt_07-mididevil_patterns,mididevil_tr_2_pt_04-mididevil_patterns,mididevil_tr_3_pt_04-mididevil_patterns,mididevil_tr_4_pt_04-mididevil_patterns
+	dw mididevil_tr_1_pt_05-mididevil_patterns,mididevil_tr_2_pt_06-mididevil_patterns,mididevil_tr_3_pt_05-mididevil_patterns,mididevil_tr_4_pt_06-mididevil_patterns
+	dw mididevil_tr_1_pt_06-mididevil_patterns,mididevil_tr_2_pt_07-mididevil_patterns,mididevil_tr_3_pt_06-mididevil_patterns,mididevil_tr_4_pt_07-mididevil_patterns
+
+
+
+;--------------------------------------------------
+
+mididevil_tr_1_pt_00:
+
+                ; M 1
+
+	db ctrlbt_pulse_width,%10_000000
+	db ctrlbt_restart_envelope
+	db ctrlbt_volume,$f0
+	db ctrlbt_envelope,%0000_0_011
+        db ctrlbt_hold_mode,00
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_fine_tune,0
+        db ctrlbt_transpose,0
+	db ctrlbt_arpeggio,$00,$0c,0
+
+	db ctrlbt_c_3
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_note_off
+	db ctrlbt_c_3      
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_note_off
+	db ctrlbt_c_3
+	db ctrlbt_wait
+
+
+                ; M 2
+
+	db ctrlbt_d#3
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_note_off
+	db ctrlbt_d#3      
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_note_off   
+	db ctrlbt_d#3
+	db ctrlbt_wait
+
+                ; M 3
+
+	db ctrlbt_d_3
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_note_off
+	db ctrlbt_d_3      
+	db ctrlbt_wait       
+	db ctrlbt_wait        
+	db ctrlbt_note_off
+	db ctrlbt_d_3
+	db ctrlbt_wait
+
+
+                ; M 4
+
+	db ctrlbt_g_3
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_d_3       
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_c_3        
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 5
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_c_3      
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_c_3      
+	db ctrlbt_wait       
+	db ctrlbt_d#3       
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+
+                ; M 6
+
+	db ctrlbt_wait
+	db ctrlbt_note_off
+	db ctrlbt_d#3       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_note_off  
+	db ctrlbt_d#3      
+	db ctrlbt_wait       
+	db ctrlbt_d_3       
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 7
+
+	db ctrlbt_wait
+	db ctrlbt_note_off
+	db ctrlbt_d_3       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_note_off  
+	db ctrlbt_d_3      
+	db ctrlbt_wait       
+	db ctrlbt_a#3        
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+
+                ; M 8
+
+	db ctrlbt_d_3
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+
+	db ctrlbt_arpeggio,$0c,$0c,0
+        db ctrlbt_transpose,00
+	db ctrlbt_track_loop
+
+;--------------------------------------------------
+
+mididevil_tr_1_pt_01:
+
+                ; M 8.2
+
+	db ctrlbt_pulse_width,%10_000000
+	db ctrlbt_restart_envelope
+	db ctrlbt_volume,$f0
+	db ctrlbt_envelope,%0000_0_011
+        db ctrlbt_hold_mode,00
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_fine_tune,0
+        db ctrlbt_transpose,0
+	db ctrlbt_arpeggio,$00,$0c,0
+
+	db ctrlbt_c_3
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_note_off
+	db ctrlbt_c_3      
+	db ctrlbt_wait       
+
+                ; M 9
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_c_3       
+	db ctrlbt_wait      
+	db ctrlbt_d#3       
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_note_off   
+	db ctrlbt_d#3
+	db ctrlbt_wait
+
+                ; M 10
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_d#3       
+	db ctrlbt_wait      
+	db ctrlbt_d_3
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_wait        
+	db ctrlbt_note_off
+	db ctrlbt_d_3
+	db ctrlbt_wait
+
+                ; M 11
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_d_3       
+	db ctrlbt_wait      
+	db ctrlbt_g_3       
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_d_3        
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 12
+
+	db ctrlbt_c_3
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_c_3      
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_c_3
+	db ctrlbt_wait
+
+                ; M 13
+
+	db ctrlbt_d#3
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_note_off  
+	db ctrlbt_d#3      
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_d#3
+	db ctrlbt_wait
+
+                ; M 14
+
+	db ctrlbt_d_3
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_note_off  
+	db ctrlbt_d_3      
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_d_3
+	db ctrlbt_wait
+
+                ; M 15
+
+	db ctrlbt_a#3
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_d_3
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_c_3       
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 16
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_c_3      
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_c_3     
+	db ctrlbt_wait       
+	db ctrlbt_d#3        
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 17
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_d#3
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_d#3     
+	db ctrlbt_wait       
+	db ctrlbt_d_3        
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 18
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_d_3       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_note_off  
+	db ctrlbt_d_3      
+	db ctrlbt_wait       
+	db ctrlbt_f_3       
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 19
+
+	db ctrlbt_f_3
+	db ctrlbt_wait
+	db ctrlbt_f_3      
+	db ctrlbt_wait      
+
+	db ctrlbt_arpeggio,$0c,$0c,0
+        db ctrlbt_transpose,00
+	db ctrlbt_track_loop
+
+;------------------------------------------------
+
+mididevil_tr_1_pt_02:
+
+                ; M 19.2
+
+	db ctrlbt_pulse_width,%10_000000
+	db ctrlbt_restart_envelope
+	db ctrlbt_volume,$f0
+	db ctrlbt_envelope,%0000_0_110
+        db ctrlbt_hold_mode,00
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_fine_tune,0
+        db ctrlbt_transpose,0
+	db ctrlbt_arpeggio,$00,$0c,0
+
+	db ctrlbt_d_4
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+
+                ; M 20
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_c_4
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 21
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_a#3
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_wait        
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 22
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_g#3      
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait        
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 23
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_c_3       
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 24
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_d#3       
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 25
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_d_3       
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 26
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_a#3
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 27
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_b_3       
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 28
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_c_3       
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 29
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_b_3       
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 30
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_c_3       
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 31
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_volume,$f0
+	db ctrlbt_envelope,%0000_0_000
+	db ctrlbt_d_3       
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 32
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 33
+
+	db ctrlbt_volume,$f0
+	db ctrlbt_envelope,%0000_0_100
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+
+	db ctrlbt_arpeggio,$0c,$0c,0
+        db ctrlbt_transpose,00
+	db ctrlbt_track_loop
+
+;------------------------------------------
+
+mididevil_tr_1_pt_03:
+
+                ; M 33.2
+
+	db ctrlbt_pulse_width,%01_000000
+	db ctrlbt_restart_envelope
+	db ctrlbt_volume,$f0
+	db ctrlbt_envelope,%0000_0_010
+        db ctrlbt_hold_mode,00
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_fine_tune,0
+        db ctrlbt_transpose,24
+	db ctrlbt_arpeggio,$00,$0c,0
+
+	db ctrlbt_g_3
+	db ctrlbt_wait
+	db ctrlbt_g_4       
+	db ctrlbt_wait      
+        db ctrlbt_transpose,12
+	db ctrlbt_d_4       
+	db ctrlbt_wait
+	db ctrlbt_g_3     
+	db ctrlbt_wait       
+
+                ; M 34
+
+        db ctrlbt_transpose,0
+	db ctrlbt_g_4
+	db ctrlbt_wait
+	db ctrlbt_d_4
+	db ctrlbt_wait      
+	db ctrlbt_a#3
+	db ctrlbt_wait
+	db ctrlbt_a#4      
+	db ctrlbt_wait       
+	db ctrlbt_f_4       
+	db ctrlbt_wait
+	db ctrlbt_a#3
+	db ctrlbt_wait
+
+                ; M 35
+
+	db ctrlbt_a#4
+	db ctrlbt_wait
+	db ctrlbt_f_4
+	db ctrlbt_wait      
+	db ctrlbt_c_4
+	db ctrlbt_wait
+	db ctrlbt_c_5     
+	db ctrlbt_wait       
+	db ctrlbt_g_4        
+	db ctrlbt_wait
+	db ctrlbt_g#3
+	db ctrlbt_wait
+
+                ; M 36
+
+	db ctrlbt_g#4
+	db ctrlbt_wait
+	db ctrlbt_d#4
+	db ctrlbt_wait      
+	db ctrlbt_g_3      
+	db ctrlbt_wait      
+	db ctrlbt_g_4      
+	db ctrlbt_wait       
+	db ctrlbt_d_4        
+	db ctrlbt_wait       
+	db ctrlbt_g_3
+	db ctrlbt_wait
+
+                ; M 37
+
+	db ctrlbt_g_4
+	db ctrlbt_wait
+	db ctrlbt_d_4      
+	db ctrlbt_wait      
+	db ctrlbt_a#3       
+	db ctrlbt_wait      
+	db ctrlbt_a#4      
+	db ctrlbt_wait       
+	db ctrlbt_f_4
+	db ctrlbt_wait       
+	db ctrlbt_a#3
+	db ctrlbt_wait
+
+                ; M 38
+
+	db ctrlbt_a#4
+	db ctrlbt_wait
+	db ctrlbt_f_4      
+	db ctrlbt_wait      
+	db ctrlbt_c_4       
+	db ctrlbt_wait
+	db ctrlbt_c_5     
+	db ctrlbt_wait       
+	db ctrlbt_g_4      
+	db ctrlbt_wait       
+	db ctrlbt_c#4
+	db ctrlbt_wait
+
+                ; M 39
+
+	db ctrlbt_c#5
+	db ctrlbt_wait
+	db ctrlbt_g#4      
+	db ctrlbt_wait      
+	db ctrlbt_g_3       
+	db ctrlbt_wait
+	db ctrlbt_g_4
+	db ctrlbt_wait       
+	db ctrlbt_d_4       
+	db ctrlbt_wait       
+	db ctrlbt_g_3
+	db ctrlbt_wait
+
+                ; M 40
+
+	db ctrlbt_g_4
+	db ctrlbt_wait
+	db ctrlbt_d_4      
+	db ctrlbt_wait      
+	db ctrlbt_a#3
+	db ctrlbt_wait
+	db ctrlbt_a#4
+	db ctrlbt_wait       
+	db ctrlbt_f_4       
+	db ctrlbt_wait       
+	db ctrlbt_a#3
+	db ctrlbt_wait
+
+                ; M 41
+
+	db ctrlbt_a#4
+	db ctrlbt_wait
+	db ctrlbt_f_4
+	db ctrlbt_wait      
+	db ctrlbt_c_4       
+	db ctrlbt_wait
+	db ctrlbt_c_5     
+	db ctrlbt_wait       
+	db ctrlbt_g_4       
+	db ctrlbt_wait       
+	db ctrlbt_g#3
+	db ctrlbt_wait
+
+                ; M 42
+
+	db ctrlbt_g#4
+	db ctrlbt_wait
+	db ctrlbt_d#4
+	db ctrlbt_wait      
+	db ctrlbt_g_3
+	db ctrlbt_wait
+	db ctrlbt_g_4
+	db ctrlbt_wait       
+	db ctrlbt_d_4       
+	db ctrlbt_wait       
+	db ctrlbt_g_3
+	db ctrlbt_wait
+
+                ; M 43
+
+	db ctrlbt_g_4
+	db ctrlbt_wait
+	db ctrlbt_d_4
+	db ctrlbt_wait      
+	db ctrlbt_a#3
+	db ctrlbt_wait
+	db ctrlbt_a#4     
+	db ctrlbt_wait       
+	db ctrlbt_f_4      
+	db ctrlbt_wait       
+	db ctrlbt_a#3
+	db ctrlbt_wait
+
+                ; M 44
+
+	db ctrlbt_a#4
+	db ctrlbt_wait
+	db ctrlbt_f_4
+	db ctrlbt_wait      
+	db ctrlbt_c_4       
+	db ctrlbt_wait
+	db ctrlbt_c_5     
+	db ctrlbt_wait       
+	db ctrlbt_g_4      
+	db ctrlbt_wait       
+	db ctrlbt_c_4
+	db ctrlbt_wait
+
+                ; M 45
+
+	db ctrlbt_c_5
+	db ctrlbt_wait
+	db ctrlbt_g_4
+	db ctrlbt_wait      
+	db ctrlbt_c_4
+	db ctrlbt_wait
+	db ctrlbt_c_5     
+	db ctrlbt_wait       
+	db ctrlbt_g_4      
+	db ctrlbt_wait       
+	db ctrlbt_c_4
+	db ctrlbt_wait
+
+                ; M 46
+
+	db ctrlbt_c_5
+	db ctrlbt_wait
+	db ctrlbt_g_4
+	db ctrlbt_wait      
+
+	db ctrlbt_arpeggio,$0c,$0c,0
+        db ctrlbt_transpose,00
+	db ctrlbt_track_loop
+
+;-----------------------------------------------
+
+mididevil_tr_1_pt_04:
+
+                ; M 46.2
+
+	db ctrlbt_auto_pwm,%00_01_10_11,0
+;	db ctrlbt_pulse_width,%10_000000
+	db ctrlbt_restart_envelope
+	db ctrlbt_volume,$c0
+	db ctrlbt_envelope,%0000_0_100
+        db ctrlbt_hold_mode,00
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_fine_tune,0
+        db ctrlbt_transpose,12
+	db ctrlbt_arpeggio,$0c,$0c,0
+
+	db ctrlbt_f_4
+	db ctrlbt_g_4
+	db ctrlbt_f_5       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+
+                ; M 47
+
+	db ctrlbt_f_4
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_f_5     
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 48
+
+	db ctrlbt_d#4
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_d_4        
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 49
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_d_4       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_c#4      
+	db ctrlbt_wait       
+	db ctrlbt_wait        
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 50
+
+	db ctrlbt_c#4
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+
+
+	db ctrlbt_auto_pwm,%00_01_10_11,0
+	db ctrlbt_arpeggio,$0c,$0c,0
+        db ctrlbt_transpose,00
+	db ctrlbt_track_loop
+
+;-----------------------------------------------
+
+mididevil_tr_1_pt_05:
+
+                ; M 63.2
+
+	db ctrlbt_auto_pwm,%00_01_10_11,0
+	db ctrlbt_pulse_width,%11_000000
+	db ctrlbt_restart_envelope
+	db ctrlbt_volume,$d0
+	db ctrlbt_envelope,%0000_0_010
+        db ctrlbt_hold_mode,00
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_fine_tune,0
+        db ctrlbt_transpose,12
+	db ctrlbt_arpeggio,$0c,$0c,0
+
+	db ctrlbt_c_3
+	db ctrlbt_wait
+	db ctrlbt_d_4      
+	db ctrlbt_wait      
+	db ctrlbt_e_4       
+	db ctrlbt_wait
+	db ctrlbt_c_3     
+	db ctrlbt_wait       
+
+                ; M 64
+
+	db ctrlbt_e_4
+	db ctrlbt_wait
+	db ctrlbt_f_4
+	db ctrlbt_wait      
+	db ctrlbt_c_3       
+	db ctrlbt_wait
+	db ctrlbt_d_4     
+	db ctrlbt_wait       
+	db ctrlbt_e_4       
+	db ctrlbt_wait
+	db ctrlbt_c_3
+	db ctrlbt_wait
+
+                ; M 65
+
+	db ctrlbt_e_4
+	db ctrlbt_wait
+	db ctrlbt_f_4       
+	db ctrlbt_wait      
+	db ctrlbt_c_3       
+	db ctrlbt_wait
+	db ctrlbt_f_4     
+	db ctrlbt_wait       
+	db ctrlbt_c_3        
+	db ctrlbt_wait
+	db ctrlbt_d_4
+	db ctrlbt_wait
+
+                ; M 66
+
+	db ctrlbt_e_4
+	db ctrlbt_wait
+	db ctrlbt_c_3      
+	db ctrlbt_wait      
+	db ctrlbt_e_4       
+	db ctrlbt_wait      
+	db ctrlbt_f_4      
+	db ctrlbt_wait       
+	db ctrlbt_c_3        
+	db ctrlbt_wait       
+	db ctrlbt_d_4
+	db ctrlbt_wait
+
+
+                ; M 67
+
+	db ctrlbt_e_4
+	db ctrlbt_wait
+	db ctrlbt_c_3      
+	db ctrlbt_wait      
+	db ctrlbt_e_4       
+	db ctrlbt_wait
+	db ctrlbt_f_4     
+	db ctrlbt_wait       
+	db ctrlbt_c_3       
+	db ctrlbt_wait
+	db ctrlbt_f_4
+	db ctrlbt_wait
+
+                ; M 68
+
+	db ctrlbt_c_3
+	db ctrlbt_wait
+	db ctrlbt_d_4       
+	db ctrlbt_wait      
+	db ctrlbt_e_4       
+	db ctrlbt_wait
+	db ctrlbt_c_3     
+	db ctrlbt_wait       
+	db ctrlbt_e_4       
+	db ctrlbt_wait
+	db ctrlbt_f_4
+	db ctrlbt_wait
+
+                ; M 69
+
+	db ctrlbt_song_speed,$38
+	db ctrlbt_c_3
+	db ctrlbt_wait
+	db ctrlbt_d_4
+	db ctrlbt_wait      
+	db ctrlbt_e_4       
+	db ctrlbt_wait
+	db ctrlbt_song_speed,$36      
+	db ctrlbt_c_3      
+	db ctrlbt_wait       
+	db ctrlbt_e_4        
+	db ctrlbt_wait       
+	db ctrlbt_f_4
+	db ctrlbt_wait
+
+                ; M 70
+
+	db ctrlbt_song_speed,$34
+	db ctrlbt_c_3
+	db ctrlbt_wait
+	db ctrlbt_a_4
+	db ctrlbt_wait      
+
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_auto_pwm,%00_01_10_11,0
+	db ctrlbt_arpeggio,$0c,$0c,0
+        db ctrlbt_transpose,00
+	db ctrlbt_track_loop
+
+;------------------------------------------------
+
+mididevil_tr_1_pt_06:
+
+                ; M 70.2
+
+	db ctrlbt_auto_pwm,%10_10_01_01,2
+	db ctrlbt_pulse_width,%10_000000
+	db ctrlbt_restart_envelope
+	db ctrlbt_volume,$f0
+	db ctrlbt_envelope,%0000_0_000
+        db ctrlbt_hold_mode,00
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_fine_tune,0
+        db ctrlbt_transpose,12
+	db ctrlbt_arpeggio,$00,$0c,0
+
+	db ctrlbt_f_3
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait       
+
+                ; M 71
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_d#3      
+	db ctrlbt_wait
+	db ctrlbt_wait    
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 72
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_c#3      
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 73
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+
+                ; M 74
+
+	db ctrlbt_volume,$f0
+	db ctrlbt_envelope,%0000_0_111
+	db ctrlbt_c#3
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait
+	db ctrlbt_volume,$f0
+	db ctrlbt_envelope,%0000_0_000      
+	db ctrlbt_f_3
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 75
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_d#3      
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 76
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_c#3      
+	db ctrlbt_wait      
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 77
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait    
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 78
+
+	db ctrlbt_volume,$f0
+	db ctrlbt_envelope,%0000_0_111
+	db ctrlbt_c#3
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_volume,$f0
+	db ctrlbt_envelope,%0000_0_000      
+	db ctrlbt_f_3
+	db ctrlbt_wait
+	db ctrlbt_wait    
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 79
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_d#3
+	db ctrlbt_wait
+	db ctrlbt_wait    
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 80
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_c#3
+	db ctrlbt_wait
+	db ctrlbt_wait    
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 81
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait    
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 82
+
+	db ctrlbt_arpeggio,$0c,$0c,0
+	db ctrlbt_volume,$f0
+	db ctrlbt_envelope,%0000_0_111
+	db ctrlbt_c#3
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_volume,$f0      
+	db ctrlbt_envelope,%0000_0_000
+	db ctrlbt_e_3
+	db ctrlbt_wait
+	db ctrlbt_wait    
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 83
+
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_volume,$b0
+	db ctrlbt_e_4
+	db ctrlbt_wait
+	db ctrlbt_b_4
+	db ctrlbt_wait      
+	db ctrlbt_e_5
+	db ctrlbt_wait
+	db ctrlbt_b_5
+	db ctrlbt_wait
+	db ctrlbt_e_6
+	db ctrlbt_wait
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$02,$18
+	db ctrlbt_volume,$c0
+	db ctrlbt_envelope,%0000_0_111
+	db ctrlbt_b_5
+	db ctrlbt_wait
+
+                ; M 84
+
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$02,$20
+	db ctrlbt_wait
+	db ctrlbt_wait
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$02,$22
+	db ctrlbt_wait
+	db ctrlbt_wait
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$02,$24
+	db ctrlbt_wait
+	db ctrlbt_wait
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$02,$26
+	db ctrlbt_wait    
+	db ctrlbt_wait
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$02,$28
+	db ctrlbt_wait      
+	db ctrlbt_wait
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$02,$2a
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_auto_pwm,%00_01_10_11,0
+	db ctrlbt_arpeggio,$0c,$0c,0
+        db ctrlbt_transpose,00
+	db ctrlbt_track_loop
+
+;---------------------------------------------------
+
+
+mididevil_tr_1_pt_07:
+
+                ; M 46.2
+
+	db ctrlbt_auto_pwm,%00_01_10_11,0
+;	db ctrlbt_pulse_width,%10_000000
+	db ctrlbt_restart_envelope
+	db ctrlbt_volume,$c0
+	db ctrlbt_envelope,%0000_0_100
+        db ctrlbt_hold_mode,00
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_fine_tune,0
+        db ctrlbt_transpose,12
+	db ctrlbt_arpeggio,$0c,$0c,0
+
+	db ctrlbt_f_4
+	db ctrlbt_g_4
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$02,$2f
+	db ctrlbt_f_5       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+
+                ; M 47
+
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_f_4
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$02,$2f
+	db ctrlbt_f_5     
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 48
+
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_song_speed,$38
+	db ctrlbt_d#4
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_d_4        
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 49
+
+	db ctrlbt_song_speed,$36
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_d_4       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_c#4      
+	db ctrlbt_wait       
+	db ctrlbt_wait        
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 50
+
+	db ctrlbt_song_speed,$34
+	db ctrlbt_c#4
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+
+
+	db ctrlbt_auto_pwm,%00_01_10_11,0
+	db ctrlbt_arpeggio,$0c,$0c,0
+        db ctrlbt_transpose,00
+	db ctrlbt_track_loop
+
+;--------------------------------------------
+
+mididevil_tr_1_pt_08:
+
+                ; M 33.2
+
+	db ctrlbt_pulse_width,%01_000000
+	db ctrlbt_restart_envelope
+	db ctrlbt_volume,$f0
+	db ctrlbt_envelope,%0000_0_001
+        db ctrlbt_hold_mode,00
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_fine_tune,0
+        db ctrlbt_transpose,0
+	db ctrlbt_arpeggio,$00,$0c,0
+
+	db ctrlbt_g_3
+	db ctrlbt_wait
+	db ctrlbt_g_4       
+	db ctrlbt_wait      
+	db ctrlbt_d_4       
+	db ctrlbt_wait
+	db ctrlbt_g_3     
+	db ctrlbt_wait       
+
+                ; M 34
+
+	db ctrlbt_g_4
+	db ctrlbt_wait
+	db ctrlbt_d_4
+	db ctrlbt_wait      
+	db ctrlbt_a#3
+	db ctrlbt_wait
+	db ctrlbt_a#4      
+	db ctrlbt_wait       
+	db ctrlbt_f_4       
+	db ctrlbt_wait
+	db ctrlbt_a#3
+	db ctrlbt_wait
+
+                ; M 35
+
+	db ctrlbt_a#4
+	db ctrlbt_wait
+	db ctrlbt_f_4
+	db ctrlbt_wait      
+	db ctrlbt_c_4
+	db ctrlbt_wait
+	db ctrlbt_c_5     
+	db ctrlbt_wait       
+	db ctrlbt_g_4        
+	db ctrlbt_wait
+	db ctrlbt_g#3
+	db ctrlbt_wait
+
+                ; M 36
+
+	db ctrlbt_g#4
+	db ctrlbt_wait
+	db ctrlbt_d#4
+	db ctrlbt_wait      
+	db ctrlbt_g_3      
+	db ctrlbt_wait      
+	db ctrlbt_g_4      
+	db ctrlbt_wait       
+	db ctrlbt_d_4        
+	db ctrlbt_wait       
+	db ctrlbt_g_3
+	db ctrlbt_wait
+
+                ; M 37
+
+	db ctrlbt_g_4
+	db ctrlbt_wait
+	db ctrlbt_d_4      
+	db ctrlbt_wait      
+	db ctrlbt_a#3       
+	db ctrlbt_wait      
+	db ctrlbt_a#4      
+	db ctrlbt_wait       
+	db ctrlbt_f_4
+	db ctrlbt_wait       
+	db ctrlbt_a#3
+	db ctrlbt_wait
+
+                ; M 38
+
+	db ctrlbt_a#4
+	db ctrlbt_wait
+	db ctrlbt_f_4      
+	db ctrlbt_wait      
+	db ctrlbt_c_4       
+	db ctrlbt_wait
+	db ctrlbt_c_5     
+	db ctrlbt_wait       
+	db ctrlbt_g_4      
+	db ctrlbt_wait       
+	db ctrlbt_c#4
+	db ctrlbt_wait
+
+                ; M 39
+
+	db ctrlbt_c#5
+	db ctrlbt_wait
+	db ctrlbt_g#4      
+	db ctrlbt_wait      
+	db ctrlbt_g_3       
+	db ctrlbt_wait
+	db ctrlbt_g_4
+	db ctrlbt_wait       
+	db ctrlbt_d_4       
+	db ctrlbt_wait       
+	db ctrlbt_g_3
+	db ctrlbt_wait
+
+                ; M 40
+
+	db ctrlbt_g_4
+	db ctrlbt_wait
+	db ctrlbt_d_4      
+	db ctrlbt_wait      
+	db ctrlbt_a#3
+	db ctrlbt_wait
+	db ctrlbt_a#4
+	db ctrlbt_wait       
+	db ctrlbt_f_4       
+	db ctrlbt_wait       
+	db ctrlbt_a#3
+	db ctrlbt_wait
+
+                ; M 41
+
+	db ctrlbt_a#4
+	db ctrlbt_wait
+	db ctrlbt_f_4
+	db ctrlbt_wait      
+	db ctrlbt_c_4       
+	db ctrlbt_wait
+	db ctrlbt_c_5     
+	db ctrlbt_wait       
+	db ctrlbt_g_4       
+	db ctrlbt_wait       
+	db ctrlbt_g#3
+	db ctrlbt_wait
+
+                ; M 42
+
+	db ctrlbt_g#4
+	db ctrlbt_wait
+	db ctrlbt_d#4
+	db ctrlbt_wait      
+	db ctrlbt_g_3
+	db ctrlbt_wait
+	db ctrlbt_g_4
+	db ctrlbt_wait       
+	db ctrlbt_d_4       
+	db ctrlbt_wait       
+	db ctrlbt_g_3
+	db ctrlbt_wait
+
+                ; M 43
+
+	db ctrlbt_g_4
+	db ctrlbt_wait
+	db ctrlbt_d_4
+	db ctrlbt_wait      
+	db ctrlbt_a#3
+	db ctrlbt_wait
+	db ctrlbt_a#4     
+	db ctrlbt_wait       
+	db ctrlbt_f_4      
+	db ctrlbt_wait       
+	db ctrlbt_a#3
+	db ctrlbt_wait
+
+                ; M 44
+
+	db ctrlbt_song_speed,$38
+	db ctrlbt_a#4
+	db ctrlbt_wait
+	db ctrlbt_f_4
+	db ctrlbt_wait      
+	db ctrlbt_c_4       
+	db ctrlbt_wait
+	db ctrlbt_song_speed,$36
+	db ctrlbt_c_5     
+	db ctrlbt_wait       
+	db ctrlbt_g_4      
+	db ctrlbt_wait       
+	db ctrlbt_c_4
+	db ctrlbt_wait
+
+                ; M 45
+
+
+	db ctrlbt_song_speed,$34
+	db ctrlbt_c_5
+	db ctrlbt_wait
+	db ctrlbt_g_4
+	db ctrlbt_wait
+	db ctrlbt_c_4
+	db ctrlbt_wait
+	db ctrlbt_song_speed,$32
+	db ctrlbt_c_5     
+	db ctrlbt_wait
+	db ctrlbt_g_4      
+	db ctrlbt_wait       
+	db ctrlbt_c_4
+	db ctrlbt_wait
+
+                ; M 46
+
+	db ctrlbt_song_speed,$30
+	db ctrlbt_c_5
+	db ctrlbt_wait
+	db ctrlbt_g_4
+	db ctrlbt_wait      
+
+	db ctrlbt_arpeggio,$0c,$0c,0
+        db ctrlbt_transpose,00
+	db ctrlbt_track_loop
+
+;--------------------------------------------------
+
+mididevil_tr_2_pt_00:
+
+                ; M 1
+
+
+	db ctrlbt_pulse_width,%01_000000
+	db ctrlbt_restart_envelope
+	db ctrlbt_volume,$f0
+	db ctrlbt_envelope,%0000_0_011
+        db ctrlbt_hold_mode,00
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_fine_tune,0
+        db ctrlbt_transpose,0
+
+	db ctrlbt_note_off
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+
+                ; M 2
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_note_off
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_note_off   
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 3
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_note_off
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_wait        
+	db ctrlbt_note_off
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+
+                ; M 4
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 5
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+
+                ; M 6
+
+	db ctrlbt_wait
+	db ctrlbt_note_off
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_note_off  
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 7
+
+	db ctrlbt_wait
+	db ctrlbt_note_off
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_note_off  
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+
+                ; M 8
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+
+        db ctrlbt_transpose,00
+	db ctrlbt_track_loop
+
+;-------------------------------------------------
+
+mididevil_tr_2_pt_01:
+
+                ; M 8.2
+
+
+	db ctrlbt_auto_panner,%11_10_11_01,3
+	db ctrlbt_auto_pwm,%00_01_10_11,1
+	db ctrlbt_pulse_width,%11_000000
+	db ctrlbt_restart_envelope
+	db ctrlbt_volume,$c0
+	db ctrlbt_envelope,%0000_0_010
+        db ctrlbt_hold_mode,00
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_fine_tune,0
+        db ctrlbt_transpose,24
+
+	db ctrlbt_c_5
+	db ctrlbt_wait
+	db ctrlbt_d_5       
+	db ctrlbt_wait      
+	db ctrlbt_d#5       
+	db ctrlbt_wait
+	db ctrlbt_c_5     
+	db ctrlbt_wait       
+
+
+                ; M 9
+
+	db ctrlbt_d_5
+	db ctrlbt_wait
+	db ctrlbt_d#5       
+	db ctrlbt_wait      
+	db ctrlbt_d_5       
+	db ctrlbt_wait
+	db ctrlbt_d#5     
+	db ctrlbt_wait       
+	db ctrlbt_f_5       
+	db ctrlbt_wait
+	db ctrlbt_d_5
+	db ctrlbt_wait
+
+                ; M 10
+
+	db ctrlbt_d#5
+	db ctrlbt_wait
+	db ctrlbt_f_5       
+	db ctrlbt_wait      
+	db ctrlbt_auto_pwm,%00_01_10_11,3
+	db ctrlbt_envelope,%0000_0_000
+	db ctrlbt_g_5       
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait
+	db ctrlbt_auto_pwm,%00_01_10_11,2       
+	db ctrlbt_wait        
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 11
+
+	db ctrlbt_auto_pwm,%00_01_10_11,1
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$02,$20
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_envelope,%0000_0_111      
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 12
+
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_envelope,%0000_0_100
+	db ctrlbt_c_6
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$02,$20
+	db ctrlbt_envelope,%0000_0_011      
+	db ctrlbt_a#5
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_a_5
+	db ctrlbt_wait
+
+                ; M 13
+
+	db ctrlbt_a#5
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_a_5       
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_g_5      
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 14
+
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$02,$20
+	db ctrlbt_a#5
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_c_6     
+	db ctrlbt_wait       
+	db ctrlbt_a#5       
+	db ctrlbt_wait       
+	db ctrlbt_a_5
+	db ctrlbt_wait
+
+
+                ; M 15
+
+	db ctrlbt_auto_pwm,%00_01_10_11,3
+	db ctrlbt_envelope,%0000_0_000
+	db ctrlbt_g_5
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_auto_pwm,%00_01_10_11,2      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_auto_pwm,%00_01_10_11,1
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$02,$20      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+
+                ; M 16
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+
+                ; M 17
+
+	db ctrlbt_auto_pwm,%00_01_10_11,2
+	db ctrlbt_envelope,%0000_0_111
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_auto_pwm,%00_01_10_11,3
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+
+                ; M 18
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+
+                ; M 19
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+
+	db ctrlbt_auto_panner,%11_10_11_01,0
+	db ctrlbt_auto_pwm,%11_00_11_00,0
+        db ctrlbt_transpose,00
+	db ctrlbt_track_loop
+
+;------------------------------------------------
+
+mididevil_tr_2_pt_02:
+
+                ; M 19.2
+
+	db ctrlbt_pulse_width,%11_000000
+	db ctrlbt_auto_pwm,%00_11_11_00,0
+	db ctrlbt_restart_envelope
+	db ctrlbt_volume,$a0
+	db ctrlbt_envelope,%0000_0_100
+        db ctrlbt_hold_mode,00
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_fine_tune,0
+        db ctrlbt_transpose,12
+	db ctrlbt_arpeggio,$00,$0c,1
+	db ctrlbt_auto_panner,%10_01_10_01,5
+
+	db ctrlbt_g_4
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_d_4       
+	db ctrlbt_wait
+	db ctrlbt_f_4     
+	db ctrlbt_wait       
+
+                ; M 20
+
+	db ctrlbt_d_4
+	db ctrlbt_wait
+	db ctrlbt_f_4
+	db ctrlbt_wait      
+	db ctrlbt_g_4      
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_d#4       
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 21
+
+	db ctrlbt_c_4
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_g_4
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_d_4        
+	db ctrlbt_wait
+	db ctrlbt_f_4
+	db ctrlbt_wait
+
+                ; M 22
+
+	db ctrlbt_d_4
+	db ctrlbt_wait
+	db ctrlbt_f_4
+	db ctrlbt_wait      
+	db ctrlbt_g_4      
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_d#4        
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 23
+
+	db ctrlbt_c_4
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_g_4       
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_d_4
+	db ctrlbt_wait       
+	db ctrlbt_f_4
+	db ctrlbt_wait
+
+                ; M 24
+
+	db ctrlbt_d_4
+	db ctrlbt_wait
+	db ctrlbt_f_4      
+	db ctrlbt_wait      
+	db ctrlbt_g_4       
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_d#4
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 25
+
+	db ctrlbt_c_4
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_g_4       
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_d_4       
+	db ctrlbt_wait       
+	db ctrlbt_f_4
+	db ctrlbt_wait
+
+                ; M 26
+
+	db ctrlbt_d_4
+	db ctrlbt_wait
+	db ctrlbt_f_4      
+	db ctrlbt_wait      
+	db ctrlbt_g_4
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_d#4       
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 27
+
+	db ctrlbt_c_4
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_g_4
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_d_4       
+	db ctrlbt_wait       
+	db ctrlbt_f_4
+	db ctrlbt_wait
+
+                ; M 28
+
+	db ctrlbt_d_4
+	db ctrlbt_wait
+	db ctrlbt_f_4
+	db ctrlbt_wait      
+	db ctrlbt_g_4       
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_d#4
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 29
+
+	db ctrlbt_c_4
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_g_4       
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_d_4
+	db ctrlbt_wait       
+	db ctrlbt_f_4
+	db ctrlbt_wait
+
+                ; M 30
+
+	db ctrlbt_d_4
+	db ctrlbt_wait
+	db ctrlbt_f_4
+	db ctrlbt_wait      
+	db ctrlbt_g_4       
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_d#4      
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 31
+
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$02,$20
+	db ctrlbt_volume,$b0
+	db ctrlbt_c_4
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_f#4       
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_d_4      
+	db ctrlbt_wait       
+	db ctrlbt_f#4
+	db ctrlbt_wait
+
+                ; M 32
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_d_4
+	db ctrlbt_wait      
+	db ctrlbt_f#4       
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_g_4      
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 33
+
+	db ctrlbt_f#4
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_auto_pwm,%10_10_01_01,0
+	db ctrlbt_auto_panner,%11_10_11_01,0
+	db ctrlbt_arpeggio,$0c,$0c,0
+        db ctrlbt_transpose,00
+	db ctrlbt_track_loop
+
+;--------------------------------------------
+
+mididevil_tr_2_pt_03:
+
+                ; M 33.2
+
+	db ctrlbt_pulse_width,%01_000000
+	db ctrlbt_restart_envelope
+	db ctrlbt_volume,$f0
+	db ctrlbt_envelope,%0000_0_010
+        db ctrlbt_hold_mode,00
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_fine_tune,0
+        db ctrlbt_transpose,24
+	db ctrlbt_arpeggio,$00,$0c,0
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_g_3
+	db ctrlbt_wait
+	db ctrlbt_g_4       
+	db ctrlbt_wait      
+        db ctrlbt_transpose,12
+	db ctrlbt_d_4       
+   
+
+                ; M 34
+
+	db ctrlbt_wait
+	db ctrlbt_g_3     
+	db ctrlbt_wait    
+        db ctrlbt_transpose,0
+	db ctrlbt_g_4
+	db ctrlbt_wait
+	db ctrlbt_d_4
+	db ctrlbt_wait      
+	db ctrlbt_a#3
+	db ctrlbt_wait
+	db ctrlbt_a#4      
+	db ctrlbt_wait       
+	db ctrlbt_f_4       
+
+                ; M 35
+
+	db ctrlbt_wait
+	db ctrlbt_a#3
+	db ctrlbt_wait
+	db ctrlbt_a#4
+	db ctrlbt_wait
+	db ctrlbt_f_4
+	db ctrlbt_wait      
+	db ctrlbt_c_4
+	db ctrlbt_wait
+	db ctrlbt_c_5     
+	db ctrlbt_wait       
+	db ctrlbt_g_4        
+
+                ; M 36
+
+	db ctrlbt_wait
+	db ctrlbt_g#3
+	db ctrlbt_wait
+	db ctrlbt_g#4
+	db ctrlbt_wait
+	db ctrlbt_d#4
+	db ctrlbt_wait      
+	db ctrlbt_g_3      
+	db ctrlbt_wait      
+	db ctrlbt_g_4      
+	db ctrlbt_wait       
+	db ctrlbt_d_4        
+
+                ; M 37
+
+	db ctrlbt_wait       
+	db ctrlbt_g_3
+	db ctrlbt_wait
+	db ctrlbt_g_4
+	db ctrlbt_wait
+	db ctrlbt_d_4      
+	db ctrlbt_wait      
+	db ctrlbt_a#3       
+	db ctrlbt_wait      
+	db ctrlbt_a#4      
+	db ctrlbt_wait       
+	db ctrlbt_f_4
+
+                ; M 38
+
+	db ctrlbt_wait       
+	db ctrlbt_a#3
+	db ctrlbt_wait
+	db ctrlbt_a#4
+	db ctrlbt_wait
+	db ctrlbt_f_4      
+	db ctrlbt_wait      
+	db ctrlbt_c_4       
+	db ctrlbt_wait
+	db ctrlbt_c_5     
+	db ctrlbt_wait       
+	db ctrlbt_g_4      
+
+                ; M 39
+
+	db ctrlbt_wait       
+	db ctrlbt_c#4
+	db ctrlbt_wait
+	db ctrlbt_c#5
+	db ctrlbt_wait
+	db ctrlbt_g#4      
+	db ctrlbt_wait      
+	db ctrlbt_g_3       
+	db ctrlbt_wait
+	db ctrlbt_g_4
+	db ctrlbt_wait       
+	db ctrlbt_d_4       
+
+                ; M 40
+
+	db ctrlbt_wait       
+	db ctrlbt_g_3
+	db ctrlbt_wait
+	db ctrlbt_g_4
+	db ctrlbt_wait
+	db ctrlbt_d_4      
+	db ctrlbt_wait      
+	db ctrlbt_a#3
+	db ctrlbt_wait
+	db ctrlbt_a#4
+	db ctrlbt_wait       
+	db ctrlbt_f_4       
+
+                ; M 41
+
+	db ctrlbt_wait       
+	db ctrlbt_a#3
+	db ctrlbt_wait
+	db ctrlbt_a#4
+	db ctrlbt_wait
+	db ctrlbt_f_4
+	db ctrlbt_wait      
+	db ctrlbt_c_4       
+	db ctrlbt_wait
+	db ctrlbt_c_5     
+	db ctrlbt_wait       
+	db ctrlbt_g_4       
+
+                ; M 42
+
+	db ctrlbt_wait       
+	db ctrlbt_g#3
+	db ctrlbt_wait
+	db ctrlbt_g#4
+	db ctrlbt_wait
+	db ctrlbt_d#4
+	db ctrlbt_wait      
+	db ctrlbt_g_3
+	db ctrlbt_wait
+	db ctrlbt_g_4
+	db ctrlbt_wait       
+	db ctrlbt_d_4       
+
+                ; M 43
+
+	db ctrlbt_wait       
+	db ctrlbt_g_3
+	db ctrlbt_wait
+	db ctrlbt_g_4
+	db ctrlbt_wait
+	db ctrlbt_d_4
+	db ctrlbt_wait      
+	db ctrlbt_a#3
+	db ctrlbt_wait
+	db ctrlbt_a#4     
+	db ctrlbt_wait       
+	db ctrlbt_f_4      
+
+                ; M 44
+
+	db ctrlbt_wait       
+	db ctrlbt_a#3
+	db ctrlbt_wait
+	db ctrlbt_a#4
+	db ctrlbt_wait
+	db ctrlbt_f_4
+	db ctrlbt_wait      
+	db ctrlbt_c_4       
+	db ctrlbt_wait
+	db ctrlbt_c_5     
+	db ctrlbt_wait       
+	db ctrlbt_g_4      
+
+                ; M 45
+
+	db ctrlbt_wait       
+	db ctrlbt_c_4
+	db ctrlbt_wait
+	db ctrlbt_c_5
+	db ctrlbt_wait
+	db ctrlbt_g_4
+	db ctrlbt_wait      
+	db ctrlbt_c_4
+	db ctrlbt_wait
+	db ctrlbt_c_5     
+	db ctrlbt_wait       
+	db ctrlbt_g_4      
+
+                ; M 46
+
+	db ctrlbt_wait       
+	db ctrlbt_c_4
+	db ctrlbt_wait
+	db ctrlbt_c_5
+
+	db ctrlbt_arpeggio,$0c,$0c,0
+        db ctrlbt_transpose,00
+	db ctrlbt_track_loop
+
+;------------------------------------------------
+
+mididevil_tr_2_pt_04:
+
+                ; M 46.2
+
+	db ctrlbt_pulse_width,%00_000000
+	db ctrlbt_restart_envelope
+	db ctrlbt_volume,$c0
+	db ctrlbt_envelope,%0000_0_100
+        db ctrlbt_hold_mode,00
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_fine_tune,0
+        db ctrlbt_transpose,12
+	db ctrlbt_arpeggio,$0c,$0c,1
+
+	db ctrlbt_f_4
+	db ctrlbt_g_4
+	db ctrlbt_c_5
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+
+                ; M 47
+
+	db ctrlbt_c_4
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_c#4     
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 48
+
+	db ctrlbt_a#3
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_a_3
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 49
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_a_3
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_g#3      
+	db ctrlbt_wait       
+	db ctrlbt_wait        
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 50
+
+	db ctrlbt_g#3
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+
+	db ctrlbt_arpeggio,$0c,$0c,0
+        db ctrlbt_transpose,00
+	db ctrlbt_track_loop
+
+;------------------------------------------
+
+mididevil_tr_2_pt_05:
+
+                ; M 1
+
+	db ctrlbt_pulse_width,%10_000000
+	db ctrlbt_restart_envelope
+	db ctrlbt_volume,$f0
+	db ctrlbt_envelope,%0000_0_011
+        db ctrlbt_hold_mode,00
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_fine_tune,15
+        db ctrlbt_transpose,0
+	db ctrlbt_arpeggio,$00,$0c,0
+
+	db ctrlbt_c_3
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_note_off
+	db ctrlbt_c_3      
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_note_off
+	db ctrlbt_c_3
+	db ctrlbt_wait
+
+
+                ; M 2
+
+	db ctrlbt_d#3
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_note_off
+	db ctrlbt_d#3      
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_note_off   
+	db ctrlbt_d#3
+	db ctrlbt_wait
+
+                ; M 3
+
+	db ctrlbt_d_3
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_note_off
+	db ctrlbt_d_3      
+	db ctrlbt_wait       
+	db ctrlbt_wait        
+	db ctrlbt_note_off
+	db ctrlbt_d_3
+	db ctrlbt_wait
+
+
+                ; M 4
+
+	db ctrlbt_g_3
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_d_3       
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_c_3        
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 5
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_c_3      
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_c_3      
+	db ctrlbt_wait       
+	db ctrlbt_d#3       
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+
+                ; M 6
+
+	db ctrlbt_wait
+	db ctrlbt_note_off
+	db ctrlbt_d#3       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_note_off  
+	db ctrlbt_d#3      
+	db ctrlbt_wait       
+	db ctrlbt_d_3       
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 7
+
+	db ctrlbt_wait
+	db ctrlbt_note_off
+	db ctrlbt_d_3       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_note_off  
+	db ctrlbt_d_3      
+	db ctrlbt_wait       
+	db ctrlbt_a#3        
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+
+                ; M 8
+
+	db ctrlbt_d_3
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+
+	db ctrlbt_arpeggio,$0c,$0c,0
+        db ctrlbt_transpose,00
+	db ctrlbt_track_loop
+
+;-------------------------------------------
+
+mididevil_tr_2_pt_06:
+
+                ; M 63.2
+
+	db ctrlbt_auto_pwm,%00_01_10_11,0
+	db ctrlbt_pulse_width,%00_000000
+	db ctrlbt_restart_envelope
+	db ctrlbt_volume,$90
+	db ctrlbt_envelope,%0000_0_100
+        db ctrlbt_hold_mode,00
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_fine_tune,0
+        db ctrlbt_transpose,24
+	db ctrlbt_arpeggio,$c0,$c0,0
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_g_3     
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$03,$2f
+	db ctrlbt_c_5      
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00    
+	db ctrlbt_e_5       
+
+                ; M 64
+
+	db ctrlbt_e_4
+	db ctrlbt_d_5
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_f_5
+	db ctrlbt_e_4     
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$03,$2f
+	db ctrlbt_c_5       
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_e_5
+
+                ; M 65
+
+	db ctrlbt_g_3
+	db ctrlbt_d_5
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_f_5
+	db ctrlbt_g_3     
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$03,$2f
+	db ctrlbt_e_5       
+	db ctrlbt_wait        
+	db ctrlbt_wait
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_e_4
+	db ctrlbt_c_5
+
+                ; M 66
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_e_5     
+	db ctrlbt_g_3      
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$03,$2f
+	db ctrlbt_d_5      
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00  
+	db ctrlbt_f_5       
+	db ctrlbt_g_3
+	db ctrlbt_c_5
+
+
+                ; M 67
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_e_5      
+	db ctrlbt_g_3      
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$03,$2f
+	db ctrlbt_d_5
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_wait
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00      
+	db ctrlbt_f_5
+	db ctrlbt_e_4
+	db ctrlbt_e_5
+
+                ; M 68
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_g_3
+	db ctrlbt_c_5      
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait    
+	db ctrlbt_e_5       
+	db ctrlbt_g_3      
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$03,$2f
+	db ctrlbt_d_5
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 69
+
+	db ctrlbt_wait
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_f_5
+	db ctrlbt_g_3
+	db ctrlbt_c_5      
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait     
+	db ctrlbt_e_5       
+	db ctrlbt_e_4        
+	db ctrlbt_g_4       
+	db ctrlbt_a_4
+	db ctrlbt_wait
+
+                ; M 70
+
+	db ctrlbt_c_5
+	db ctrlbt_wait
+	db ctrlbt_d_5
+	db ctrlbt_wait      
+
+	db ctrlbt_auto_pwm,%00_01_10_11,0
+	db ctrlbt_arpeggio,$0c,$0c,0
+        db ctrlbt_transpose,00
+	db ctrlbt_track_loop
+
+;-----------------------------------------------
+
+mididevil_tr_2_pt_07:
+
+                ; M 70.2
+
+	db ctrlbt_auto_pwm,%00_01_10_11,0
+	db ctrlbt_auto_panner,%11_10_11_01,3
+	db ctrlbt_pulse_width,%10_000000
+	db ctrlbt_restart_envelope
+	db ctrlbt_volume,$a0
+	db ctrlbt_envelope,%0000_0_100
+        db ctrlbt_hold_mode,00
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_fine_tune,0
+        db ctrlbt_transpose,12
+	db ctrlbt_arpeggio,$0c,$0c,0
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+
+                ; M 71
+
+	db ctrlbt_c_6
+	db ctrlbt_wait
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$02,$20
+	db ctrlbt_a#5
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_a_5
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait    
+	db ctrlbt_wait       
+
+                ; M 72
+
+	db ctrlbt_a#5
+	db ctrlbt_wait
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$02,$2f
+	db ctrlbt_a_5
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_g_5
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+
+                ; M 73
+
+	db ctrlbt_f_5
+	db ctrlbt_wait
+	db ctrlbt_g_5
+	db ctrlbt_wait
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$02,$2f
+	db ctrlbt_g#5
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait      
+	db ctrlbt_a#5      
+	db ctrlbt_wait      
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+
+
+                ; M 74
+
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_c_6       
+	db ctrlbt_wait       
+	db ctrlbt_c#6
+	db ctrlbt_wait
+	db ctrlbt_d#6
+	db ctrlbt_wait
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$02,$2f
+	db ctrlbt_f_6     
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait
+
+                ; M 75
+
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00       
+	db ctrlbt_c_6
+	db ctrlbt_wait
+	db ctrlbt_a#5
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_a_5
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+
+                ; M 76
+
+	db ctrlbt_a#5      
+	db ctrlbt_wait
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$02,$2f
+	db ctrlbt_a_5
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_g_5
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+
+                ; M 77
+
+	db ctrlbt_f_5       
+	db ctrlbt_wait       
+	db ctrlbt_g_5
+	db ctrlbt_wait
+	db ctrlbt_g#5
+	db ctrlbt_wait
+	db ctrlbt_a#5
+	db ctrlbt_wait      
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$02,$20
+	db ctrlbt_g#5      
+	db ctrlbt_wait
+	db ctrlbt_wait    
+	db ctrlbt_wait       
+
+                ; M 78
+
+	db ctrlbt_g_5      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$02,$2f
+	db ctrlbt_f_5
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait    
+	db ctrlbt_wait       
+
+                ; M 79
+
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_c_6
+	db ctrlbt_wait
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$02,$2f
+	db ctrlbt_a#5
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_a_5
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait    
+	db ctrlbt_wait       
+
+                ; M 80
+
+	db ctrlbt_a#5
+	db ctrlbt_wait
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$02,$2f
+	db ctrlbt_a_5
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_g_5
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_f_5    
+	db ctrlbt_wait       
+
+                ; M 81
+
+	db ctrlbt_g_5      
+	db ctrlbt_wait
+	db ctrlbt_g#5
+	db ctrlbt_wait
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$02,$2f
+	db ctrlbt_a#5
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00      
+	db ctrlbt_c_6
+	db ctrlbt_wait
+	db ctrlbt_c#6    
+	db ctrlbt_wait       
+
+                ; M 82
+
+	db ctrlbt_d#6      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_f_6
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$02,$20
+	db ctrlbt_g#6
+	db ctrlbt_wait
+	db ctrlbt_wait    
+	db ctrlbt_wait       
+
+                ; M 83
+
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$02,$2f
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_envelope,%0000_0_111
+	db ctrlbt_e_6
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 84
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait    
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_auto_panner,%11_10_11_01,0
+	db ctrlbt_auto_pwm,%00_01_10_11,0
+	db ctrlbt_arpeggio,$0c,$0c,0
+        db ctrlbt_transpose,00
+	db ctrlbt_track_loop
+
+;--------------------------------------------------
+
+mididevil_tr_3_pt_00:
+
+
+                ; M 1
+
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$80
+	db ctrlbt_gain_waveform,$21
+        db ctrlbt_hold_mode,00
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$02,$40
+        db ctrlbt_transpose,24
+	db ctrlbt_arpeggio,$07,$0a,0
+
+	db ctrlbt_g_4
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$80
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$81
+	db ctrlbt_gain_waveform,$22
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$82
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$83
+	db ctrlbt_gain_waveform,$23
+	db ctrlbt_c_4       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$84
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$85
+	db ctrlbt_gain_waveform,$24
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$86
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$87
+	db ctrlbt_gain_waveform,$25
+	db ctrlbt_g_4       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$88
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$89
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$8a
+	db ctrlbt_wait
+
+                ; M 2
+
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$8b
+	db ctrlbt_a#4
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$8a
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$89
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$88
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$87
+	db ctrlbt_d#4       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$86
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$85
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$84
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$83
+	db ctrlbt_a#4       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$82
+	db ctrlbt_wait   
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$81
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$80
+	db ctrlbt_wait
+
+                ; M 3
+
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$80
+	db ctrlbt_a_4
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$81
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$82
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$83
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$84
+	db ctrlbt_d_4       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$85
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$86
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$87
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$88
+	db ctrlbt_a_4        
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$89
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$8a
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$8b
+	db ctrlbt_wait
+
+                ; M 4
+
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$8b
+	db ctrlbt_c_5
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$8a
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$89
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$88
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$87
+	db ctrlbt_a_4       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$86
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$85
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$84
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$83
+	db ctrlbt_g_4        
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$82
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$81
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$80
+	db ctrlbt_wait
+
+                ; M 5
+
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$80
+	db ctrlbt_c_4
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$81
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$82
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$83
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$84
+	db ctrlbt_g_4       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$85
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$86
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$87
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$88
+	db ctrlbt_a#4      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$89
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$8a
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$8b
+	db ctrlbt_wait
+
+                ; M 6
+
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$8b
+	db ctrlbt_d#4
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$8a
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$89
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$88
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$87
+	db ctrlbt_a#4       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$86
+	db ctrlbt_wait  
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$85
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$84
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$83
+	db ctrlbt_a_4      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$82
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$81
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$80
+	db ctrlbt_wait
+
+                ; M 7
+
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$80
+	db ctrlbt_d_4
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$81
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$82
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$83
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$84
+	db ctrlbt_a_4       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$85
+	db ctrlbt_wait  
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$86
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$87
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$88
+	db ctrlbt_c_5       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$89
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$8a
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$8b
+	db ctrlbt_wait
+
+                ; M 8
+
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$8b
+	db ctrlbt_a_4
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$8a
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$89
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$88
+	db ctrlbt_wait      
+
+	db ctrlbt_arpeggio,$07,$0a,0
+        db ctrlbt_transpose,00
+	db ctrlbt_track_loop
+
+;-------------------------------------------------
+
+mididevil_tr_3_pt_01:
+
+
+                ; M 8.2
+
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3f
+	db ctrlbt_gain_waveform,$21
+        db ctrlbt_hold_mode,00
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+        db ctrlbt_transpose,24
+	db ctrlbt_arpeggio,$07,$0a,0
+
+	db ctrlbt_g_4
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3e
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3d
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3c
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3b
+	db ctrlbt_c_4       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3a
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$39
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$38
+	db ctrlbt_wait       
+
+                ; M 9
+
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$37
+	db ctrlbt_g_4
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$36
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$35
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$34
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$33
+	db ctrlbt_a#4       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$32
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$31
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$32
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$33
+	db ctrlbt_d#4
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$34
+	db ctrlbt_wait   
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$35
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$36
+	db ctrlbt_wait
+
+                ; M 10
+
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$37
+	db ctrlbt_a#4
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$38
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$39
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3a
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3b
+	db ctrlbt_a_4       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3c
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3d
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3e
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3f
+	db ctrlbt_d_4        
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$36
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3f
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$36
+	db ctrlbt_wait
+
+                ; M 11
+
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3f
+	db ctrlbt_a_4
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3e
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3d
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3c
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3b
+	db ctrlbt_c_5       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3a
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$39
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$38
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$37
+	db ctrlbt_a_4        
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$36
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$35
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$34
+	db ctrlbt_wait
+
+                ; M 12
+
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$33
+	db ctrlbt_g_4
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$32
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$31
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$32
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$33
+	db ctrlbt_c_4       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$34
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$35
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$36
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$37
+	db ctrlbt_g_4      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$38
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$39
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3a
+	db ctrlbt_wait
+
+                ; M 13
+
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3b
+	db ctrlbt_a#4
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3c
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3e
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$36
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3f
+	db ctrlbt_d#4       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3e
+	db ctrlbt_wait  
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3d
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3c
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3b
+	db ctrlbt_a#4      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3a
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$39
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$38
+	db ctrlbt_wait
+
+                ; M 14
+
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$37
+	db ctrlbt_a_4
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$36
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$35
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$34
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$33
+	db ctrlbt_d_4       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$32
+	db ctrlbt_wait  
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$31
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$32
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$33
+	db ctrlbt_a_4       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$34
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$35
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$36
+	db ctrlbt_wait
+
+                ; M 15
+
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$37
+	db ctrlbt_c_5
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$38
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$39
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3a
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3b
+	db ctrlbt_a_4       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3c
+	db ctrlbt_wait  
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3d
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3e
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3f
+	db ctrlbt_g_4       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$36
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3f
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$36
+	db ctrlbt_wait
+
+                ; M 16
+
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3f
+	db ctrlbt_c_4
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3e
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3d
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3c
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3b
+	db ctrlbt_g_4
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3a
+	db ctrlbt_wait  
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$39
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$38
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$37
+	db ctrlbt_a#4       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$36
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$35
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$34
+	db ctrlbt_wait
+
+                ; M 17
+
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3f
+	db ctrlbt_d#4
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3e
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3d
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3c
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3b
+	db ctrlbt_a#4       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3a
+	db ctrlbt_wait  
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$39
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$37
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$36
+	db ctrlbt_a_4       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$35
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$34
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$33
+	db ctrlbt_wait
+
+                ; M 18
+
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$32
+	db ctrlbt_d_4
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$31
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$32
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$33
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$34
+	db ctrlbt_a_4       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$35
+	db ctrlbt_wait  
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$36
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$37
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$38
+	db ctrlbt_c_5       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$39
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3a
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3b
+	db ctrlbt_wait
+
+                ; M 19
+
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3c
+	db ctrlbt_a_4
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3d
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3e
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3f
+	db ctrlbt_wait      
+
+	db ctrlbt_arpeggio,$07,$0a,0
+        db ctrlbt_transpose,00
+	db ctrlbt_track_loop
+
+;-------------------------------------------
+
+mididevil_tr_3_pt_02:
+
+                ; M 19.2
+
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$0f
+	db ctrlbt_gain_waveform,$29
+        db ctrlbt_hold_mode,00
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+        db ctrlbt_transpose,24
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_g_4    
+	db ctrlbt_wait       
+
+                ; M 20
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_a_4
+	db ctrlbt_wait      
+	db ctrlbt_a#4      
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_a_4       
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 21
+
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$03,$20
+	db ctrlbt_g_4
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_a#4
+	db ctrlbt_wait
+
+                ; M 22
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_d_5
+	db ctrlbt_wait      
+	db ctrlbt_c_5
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_a#4        
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 23
+
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$03,$20
+	db ctrlbt_c_5
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait       
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_d_5
+	db ctrlbt_wait
+
+                ; M 24
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_d#5     
+	db ctrlbt_wait      
+	db ctrlbt_d_5       
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_c_5
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 25
+
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$03,$20
+	db ctrlbt_a#4
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_g_4
+	db ctrlbt_wait
+
+                ; M 26
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_a_4     
+	db ctrlbt_wait      
+	db ctrlbt_a#4
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_a_4       
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 27
+
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$03,$20
+	db ctrlbt_g_4
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_a#4
+	db ctrlbt_wait
+
+                ; M 28
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_d_5
+	db ctrlbt_wait      
+	db ctrlbt_c_5       
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_a#4
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 29
+
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$03,$20
+	db ctrlbt_c_5
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00       
+	db ctrlbt_d_5
+	db ctrlbt_wait
+
+                ; M 30
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_d#5
+	db ctrlbt_wait      
+	db ctrlbt_d_5
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_c_5      
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 31
+
+	db ctrlbt_a#4
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$03,$20
+	db ctrlbt_d_5
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 32
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$03,$30
+	db ctrlbt_f#5      
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 33
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+
+
+	db ctrlbt_arpeggio,$0c,$0c,0
+        db ctrlbt_transpose,00
+	db ctrlbt_track_loop
+
+;----------------------------------------------
+
+mididevil_tr_3_pt_03:
+
+                ; M 33.2
+
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$8e
+	db ctrlbt_gain_waveform,$29
+	db ctrlbt_portamento,$30
+        db ctrlbt_hold_mode,00
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$02,$20
+
+	db ctrlbt_g_7
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$8d
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$8c
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$8b
+	db ctrlbt_wait
+	db ctrlbt_wait       
+
+                ; M 34
+
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$8a
+	db ctrlbt_gain_waveform,$29
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$89
+	db ctrlbt_gain_waveform,$28
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$88
+	db ctrlbt_gain_waveform,$27
+	db ctrlbt_wait     
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$87
+	db ctrlbt_gain_waveform,$26
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$86
+	db ctrlbt_gain_waveform,$26
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$85
+	db ctrlbt_gain_waveform,$25
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 35
+
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$84
+	db ctrlbt_gain_waveform,$24
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$83
+	db ctrlbt_gain_waveform,$23
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$82
+	db ctrlbt_gain_waveform,$22
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$81
+	db ctrlbt_gain_waveform,$21
+	db ctrlbt_wait     
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_gain_waveform,$20  
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 36
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 37
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 38
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 39
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 40
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 41
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 42
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 43
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 44
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 45
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 46
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+
+	db ctrlbt_portamento,$00
+	db ctrlbt_arpeggio,$0c,$0c,0
+        db ctrlbt_transpose,00
+	db ctrlbt_track_loop
+
+;-------------------------------------------
+
+mididevil_tr_3_pt_04:
+
+                ; M 46.2
+
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3c
+	db ctrlbt_gain_waveform,$4f
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+        db ctrlbt_transpose,24
+	db ctrlbt_arpeggio,$00,$0c,3
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_f_3       
+	db ctrlbt_restart_envelope
+	db ctrlbt_gain_waveform,$4d
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_gain_waveform,$4b
+	db ctrlbt_wait     
+	db ctrlbt_restart_envelope
+	db ctrlbt_gain_waveform,$49
+	db ctrlbt_wait       
+
+                ; M 47
+
+	db ctrlbt_restart_envelope
+	db ctrlbt_gain_waveform,$47
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_gain_waveform,$45
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_gain_waveform,$43
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_gain_waveform,$41
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$8c
+	db ctrlbt_gain_waveform,$4f
+	db ctrlbt_f#3       
+	db ctrlbt_wait
+	db ctrlbt_note_off     
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3c
+	db ctrlbt_gain_waveform,$4f
+	db ctrlbt_d#3
+	db ctrlbt_wait
+
+                ; M 48
+
+	db ctrlbt_note_off
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_d_3       
+	db ctrlbt_restart_envelope
+	db ctrlbt_gain_waveform,$4d
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_gain_waveform,$4b
+	db ctrlbt_wait     
+	db ctrlbt_restart_envelope
+	db ctrlbt_gain_waveform,$49
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_gain_waveform,$47
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_gain_waveform,$45
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_gain_waveform,$43
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_gain_waveform,$41
+	db ctrlbt_wait
+
+                ; M 49
+
+
+	db ctrlbt_restart_envelope
+	db ctrlbt_gain_waveform,$4f
+	db ctrlbt_d_3
+	db ctrlbt_wait
+	db ctrlbt_note_off
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$8c
+	db ctrlbt_gain_waveform,$4f
+	db ctrlbt_c#3   
+	db ctrlbt_wait      
+	db ctrlbt_note_off      
+	db ctrlbt_wait       
+	db ctrlbt_wait        
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3c
+	db ctrlbt_gain_waveform,$4f
+	db ctrlbt_c#3
+	db ctrlbt_restart_envelope
+	db ctrlbt_gain_waveform,$4d
+	db ctrlbt_wait
+
+                ; M 50
+
+	db ctrlbt_restart_envelope
+	db ctrlbt_gain_waveform,$4b
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_gain_waveform,$49
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_gain_waveform,$47
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_gain_waveform,$45
+	db ctrlbt_wait      
+
+	db ctrlbt_arpeggio,$0c,$0c,0
+        db ctrlbt_transpose,00
+	db ctrlbt_track_loop
+
+
+;--------------------------------------------
+
+
+mididevil_tr_3_pt_05:
+
+                ; M 63.2
+
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$3a
+	db ctrlbt_gain_waveform,$48
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+        db ctrlbt_transpose,0
+	db ctrlbt_arpeggio,$0e,$7c,3
+
+	db ctrlbt_c_4
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+
+                ; M 64
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 65
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 66
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait  
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait        
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 67
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 68
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 69
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait  
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait        
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 70
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+
+	db ctrlbt_arpeggio,$0c,$0c,0
+        db ctrlbt_transpose,00
+	db ctrlbt_track_loop
+
+;------------------------------------------------
+
+mididevil_tr_3_pt_06:
+
+                ; M 70.2
+
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$00
+	db ctrlbt_gain_waveform,$28
+        db ctrlbt_hold_mode,00
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+        db ctrlbt_transpose,24
+	db ctrlbt_arpeggio,$0c,$0c,0
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_c_6
+	db ctrlbt_wait
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$02,$20
+	db ctrlbt_a#5
+	db ctrlbt_wait       
+
+                ; M 71
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_a_5
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait    
+	db ctrlbt_wait       
+	db ctrlbt_a#5
+	db ctrlbt_wait
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$02,$2f
+	db ctrlbt_a_5
+	db ctrlbt_wait
+
+                ; M 72
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_g_5
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_f_5
+	db ctrlbt_wait
+	db ctrlbt_g_5
+	db ctrlbt_wait
+
+                ; M 73
+
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$02,$2f
+	db ctrlbt_g#5
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait      
+	db ctrlbt_a#5      
+	db ctrlbt_wait      
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_c_6       
+	db ctrlbt_wait       
+	db ctrlbt_c#6
+	db ctrlbt_wait
+
+
+                ; M 74
+
+	db ctrlbt_d#6
+	db ctrlbt_wait
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$02,$2f
+	db ctrlbt_f_6     
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00       
+	db ctrlbt_c_6
+	db ctrlbt_wait
+	db ctrlbt_a#5
+	db ctrlbt_wait
+
+                ; M 75
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_a_5
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_a#5      
+	db ctrlbt_wait
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$02,$2f
+	db ctrlbt_a_5
+	db ctrlbt_wait
+
+                ; M 76
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_g_5
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_f_5       
+	db ctrlbt_wait       
+	db ctrlbt_g_5
+	db ctrlbt_wait
+
+                ; M 77
+
+	db ctrlbt_g#5
+	db ctrlbt_wait
+	db ctrlbt_a#5
+	db ctrlbt_wait      
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$02,$20
+	db ctrlbt_g#5      
+	db ctrlbt_wait
+	db ctrlbt_wait    
+	db ctrlbt_wait       
+	db ctrlbt_g_5      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 78
+
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$02,$2f
+	db ctrlbt_f_5
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait    
+	db ctrlbt_wait       
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_c_6
+	db ctrlbt_wait
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$02,$2f
+	db ctrlbt_a#5
+	db ctrlbt_wait
+
+                ; M 79
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_a_5
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait    
+	db ctrlbt_wait       
+	db ctrlbt_a#5
+	db ctrlbt_wait
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$02,$2f
+	db ctrlbt_a_5
+	db ctrlbt_wait
+
+                ; M 80
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_g_5
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_f_5    
+	db ctrlbt_wait       
+	db ctrlbt_g_5      
+	db ctrlbt_wait
+	db ctrlbt_g#5
+	db ctrlbt_wait
+
+                ; M 81
+
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$02,$2f
+	db ctrlbt_a#5
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00      
+	db ctrlbt_c_6
+	db ctrlbt_wait
+	db ctrlbt_c#6    
+	db ctrlbt_wait       
+	db ctrlbt_d#6      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 82
+
+	db ctrlbt_f_6
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$02,$20
+	db ctrlbt_g#6
+	db ctrlbt_wait
+	db ctrlbt_wait    
+	db ctrlbt_wait       
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$02,$2f
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 83
+
+	db ctrlbt_e_6
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 84
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait    
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+	db ctrlbt_arpeggio,$0c,$0c,0
+        db ctrlbt_transpose,00
+	db ctrlbt_track_loop
+
+;---------------------------------------------
+
+mididevil_tr_3_pt_07:
+
+                ; M 33.2
+
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$8e
+	db ctrlbt_gain_waveform,$29
+	db ctrlbt_portamento,$30
+        db ctrlbt_hold_mode,00
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$02,$20
+
+	db ctrlbt_g_7
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$8d
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$8c
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$8b
+	db ctrlbt_wait
+	db ctrlbt_wait       
+
+                ; M 34
+
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$8a
+	db ctrlbt_gain_waveform,$29
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$89
+	db ctrlbt_gain_waveform,$28
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$88
+	db ctrlbt_gain_waveform,$27
+	db ctrlbt_wait     
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$87
+	db ctrlbt_gain_waveform,$26
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$86
+	db ctrlbt_gain_waveform,$26
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$85
+	db ctrlbt_gain_waveform,$25
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 35
+
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$84
+	db ctrlbt_gain_waveform,$24
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$83
+	db ctrlbt_gain_waveform,$23
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$82
+	db ctrlbt_gain_waveform,$22
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$81
+	db ctrlbt_gain_waveform,$21
+	db ctrlbt_wait     
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_gain_waveform,$20  
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 36
+
+	db ctrlbt_portamento,$76
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$8e
+	db ctrlbt_gain_waveform,$29
+	db ctrlbt_a#6
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$8d
+	db ctrlbt_gain_waveform,$28
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$8c
+	db ctrlbt_gain_waveform,$27
+	db ctrlbt_g_6
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$8b
+	db ctrlbt_gain_waveform,$26
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$8a
+	db ctrlbt_gain_waveform,$27
+	db ctrlbt_portamento,$30
+	db ctrlbt_c_6
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$89
+	db ctrlbt_gain_waveform,$26
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 37
+
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$88
+	db ctrlbt_gain_waveform,$25
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$87
+	db ctrlbt_gain_waveform,$24
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$86
+	db ctrlbt_gain_waveform,$23
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$85
+	db ctrlbt_gain_waveform,$24
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$84
+	db ctrlbt_gain_waveform,$25
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$83
+	db ctrlbt_gain_waveform,$26
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 38
+
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$82
+	db ctrlbt_gain_waveform,$27
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$81
+	db ctrlbt_gain_waveform,$28
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$82
+	db ctrlbt_gain_waveform,$29
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$83
+	db ctrlbt_gain_waveform,$28
+	db ctrlbt_wait     
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$84
+	db ctrlbt_gain_waveform,$29
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$85
+	db ctrlbt_gain_waveform,$28
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 39
+
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$86
+	db ctrlbt_gain_waveform,$27
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$87
+	db ctrlbt_gain_waveform,$26
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$88
+	db ctrlbt_gain_waveform,$25
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$89
+	db ctrlbt_gain_waveform,$24
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$8a
+	db ctrlbt_gain_waveform,$23
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$8b
+	db ctrlbt_gain_waveform,$22
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 40
+
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$8c
+	db ctrlbt_gain_waveform,$21
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 41
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 42
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 43
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 44
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 45
+
+	db ctrlbt_portamento,$00
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$80
+	db ctrlbt_gain_waveform,$27
+	db ctrlbt_c_7
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$81
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$82
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$83
+	db ctrlbt_a#6      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$84
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$85
+	db ctrlbt_g_6
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$86
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$87
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$88
+	db ctrlbt_wait     
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$89
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$8a
+	db ctrlbt_a#6      
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$8b
+	db ctrlbt_wait       
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$8c
+	db ctrlbt_c_6
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$80
+	db ctrlbt_wait
+
+                ; M 46
+
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$8d
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$80
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$8f
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$80
+	db ctrlbt_wait
+	db ctrlbt_restart_envelope
+	db ctrlbt_waveform,$8f
+	db ctrlbt_wait      
+
+	db ctrlbt_portamento,$00
+	db ctrlbt_arpeggio,$0c,$0c,0
+        db ctrlbt_transpose,00
+	db ctrlbt_track_loop
+
+;--------------------------------------------------
+
+mididevil_tr_4_pt_00:
+
+                ; M 1
+
+        db ctrlbt_volume,$f0
+        db ctrlbt_hold_mode,00
+        db ctrlbt_duration,0
+        db $25
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait
+
+                ; M 2
+
+        db ctrlbt_volume,$c0
+        db $40+$2d
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait
+
+                ; M 3
+
+        db ctrlbt_volume,$f0
+        db $25
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait
+
+                ; M 4
+
+        db ctrlbt_volume,$c0
+        db $40+$2d
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+        db ctrlbt_volume,$f0
+        db $25
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait
+
+                ; M 5
+
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait
+        db ctrlbt_volume,$f0
+        db $3f      
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+        db ctrlbt_volume,$c0
+        db $40+$2d
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait
+
+                ; M 6
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+        db ctrlbt_volume,$f0
+        db $3f       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+        db ctrlbt_volume,$f0
+        db $25
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait
+
+                ; M 7
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+        db ctrlbt_volume,$d0
+        db $3f
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+        db ctrlbt_volume,$c0
+        db $40+$2d
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+
+                ; M 8
+
+        db ctrlbt_volume,$a0
+        db $40+$2d
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+
+	db ctrlbt_track_loop
+
+;---------------------------------------------
+
+mididevil_tr_4_pt_01:
+
+                ; M 8.2
+
+        db ctrlbt_hold_mode,01
+        db ctrlbt_volume,$f0
+        db ctrlbt_duration,58
+        db $40+$25
+        db ctrlbt_volume,$b0
+        db $3f
+        db ctrlbt_volume,$e0
+        db $3e
+        db ctrlbt_volume,$b0
+        db $3f
+        db ctrlbt_volume,$f0
+        db $3e
+	db ctrlbt_wait      
+        db ctrlbt_volume,$b0
+        db $3f
+	db ctrlbt_wait       
+
+                ; M 9
+
+        db ctrlbt_duration,10
+        db ctrlbt_volume,$90
+        db $35
+	db ctrlbt_wait
+        db ctrlbt_volume,$c0
+        db $3f
+	db ctrlbt_wait      
+        db ctrlbt_duration,58
+        db ctrlbt_volume,$f0
+        db $3e
+	db ctrlbt_wait      
+        db ctrlbt_volume,$c0
+        db $3f
+	db ctrlbt_wait       
+        db ctrlbt_volume,$f0
+        db $3e
+	db ctrlbt_wait       
+        db ctrlbt_volume,$c0
+        db $3f
+	db ctrlbt_wait
+
+                ; M 10
+
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait
+        db ctrlbt_volume,$c0
+        db $3e
+	db ctrlbt_wait      
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait      
+        db ctrlbt_volume,$c0
+        db $3e
+	db ctrlbt_wait       
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait       
+        db ctrlbt_volume,$c0
+        db $3f
+	db ctrlbt_wait
+
+                ; M 11
+
+        db ctrlbt_duration,10
+        db ctrlbt_volume,$90
+        db $35
+	db ctrlbt_wait
+        db ctrlbt_volume,$c0
+        db $3f
+	db ctrlbt_wait      
+        db ctrlbt_duration,58
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait      
+        db ctrlbt_volume,$f0
+        db $40+$25
+	db ctrlbt_wait       
+        db ctrlbt_volume,$c0
+        db $3f
+	db ctrlbt_wait       
+        db ctrlbt_volume,$c0
+        db $3f
+	db ctrlbt_wait
+
+                ; M 12
+
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait
+        db ctrlbt_volume,$c0
+        db $3e
+	db ctrlbt_wait      
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait      
+        db ctrlbt_volume,$c0
+        db $3e
+	db ctrlbt_wait       
+        db ctrlbt_volume,$90
+        db ctrlbt_duration,10
+        db $35
+	db ctrlbt_wait       
+        db ctrlbt_volume,$c0
+        db $3f
+	db ctrlbt_wait
+
+                ; M 13
+
+        db ctrlbt_duration,58
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait
+        db ctrlbt_volume,$c0
+        db $3e
+	db ctrlbt_wait      
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait      
+        db ctrlbt_volume,$c0
+        db $3e
+	db ctrlbt_wait       
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait       
+        db ctrlbt_volume,$c0
+        db $3e
+	db ctrlbt_wait
+
+                ; M 14
+
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait
+        db ctrlbt_volume,$b0
+        db $3f
+        db ctrlbt_volume,$e0
+        db $3e
+        db ctrlbt_volume,$b0
+        db $3f
+	db ctrlbt_wait      
+        db ctrlbt_volume,$f0
+        db $3e
+	db ctrlbt_wait       
+        db ctrlbt_volume,$90
+        db ctrlbt_duration,10
+        db $35
+	db ctrlbt_wait       
+        db ctrlbt_volume,$d0
+        db $3f
+        db ctrlbt_volume,$b0
+        db ctrlbt_duration,58
+        db $3f
+
+                ; M 15
+
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait
+        db ctrlbt_volume,$b0
+        db $3e
+        db ctrlbt_volume,$e0
+        db $3f
+        db ctrlbt_volume,$b0
+        db $3f
+	db ctrlbt_wait      
+        db ctrlbt_volume,$f0
+        db $3e
+	db ctrlbt_wait       
+        db ctrlbt_volume,$90
+        db ctrlbt_duration,10
+        db $35
+	db ctrlbt_wait       
+        db ctrlbt_volume,$d0
+        db $3f
+        db ctrlbt_duration,58
+        db ctrlbt_volume,$b0
+        db $3e
+
+                ; M 16
+
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait
+        db ctrlbt_volume,$b0
+        db $3f
+        db ctrlbt_volume,$e0
+        db $3e
+        db ctrlbt_volume,$b0
+        db $3f
+	db ctrlbt_wait      
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait       
+        db ctrlbt_volume,$90
+        db ctrlbt_duration,10
+        db $35
+	db ctrlbt_wait       
+        db ctrlbt_volume,$d0
+        db $3f
+        db ctrlbt_duration,58
+        db ctrlbt_volume,$b0
+        db $3e
+
+                ; M 17
+
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait
+        db ctrlbt_volume,$b0
+        db $3f
+        db ctrlbt_volume,$e0
+        db $3e
+        db ctrlbt_volume,$b0
+        db $3f
+	db ctrlbt_wait      
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait       
+        db ctrlbt_volume,$90
+        db ctrlbt_duration,10
+        db $35
+	db ctrlbt_wait       
+        db ctrlbt_volume,$d0
+        db $3f
+        db ctrlbt_volume,$b0
+        db ctrlbt_duration,58
+        db $3e
+
+                ; M 18
+
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait
+        db ctrlbt_volume,$b0
+        db $3f
+        db ctrlbt_volume,$e0
+        db $3e
+        db ctrlbt_volume,$b0
+        db $3f
+	db ctrlbt_wait      
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait       
+        db ctrlbt_volume,$a0
+        db ctrlbt_duration,10
+        db $35
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+
+                ; M 19
+
+        db ctrlbt_duration,10
+        db ctrlbt_volume,$90
+        db $35
+	db ctrlbt_wait
+        db ctrlbt_duration,30
+        db ctrlbt_volume,$80
+        db $35
+	db ctrlbt_wait
+
+	db ctrlbt_track_loop
+
+;------------------------------------------------
+
+mididevil_tr_4_pt_02:
+
+                ; M 19.2
+
+        db ctrlbt_hold_mode,00
+        db ctrlbt_volume,$f0
+        db ctrlbt_duration,00
+        db $40+$25
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+
+                ; M 20
+
+        db ctrlbt_duration,10
+        db ctrlbt_volume,$90
+        db $35
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+        db ctrlbt_hold_mode,01
+        db ctrlbt_duration,40
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait      
+        db ctrlbt_volume,$c0
+        db $3f
+	db ctrlbt_wait       
+        db ctrlbt_volume,$f0
+        db ctrlbt_duration,10
+        db $3f
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait
+
+                ; M 21
+
+        db ctrlbt_duration,40
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+        db ctrlbt_duration,46
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait       
+        db ctrlbt_volume,$c0
+        db $3f
+	db ctrlbt_wait
+
+                ; M 22
+
+        db ctrlbt_duration,10
+        db ctrlbt_volume,$90
+        db $35
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+        db ctrlbt_duration,40
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait      
+        db ctrlbt_volume,$c0
+        db $3f
+	db ctrlbt_wait       
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait
+
+                ; M 23
+
+        db ctrlbt_duration,40
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait      
+        db ctrlbt_volume,$c0
+        db $3f
+	db ctrlbt_wait       
+        db ctrlbt_volume,$90
+        db ctrlbt_duration,10
+        db $35
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait
+
+                ; M 24
+
+        db ctrlbt_duration,40
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait      
+        db ctrlbt_volume,$c0
+        db $3f
+	db ctrlbt_wait       
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait
+
+                ; M 25
+
+        db ctrlbt_duration,46
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait
+        db ctrlbt_volume,$b0
+        db $3f
+        db ctrlbt_volume,$e0
+        db $3f
+        db ctrlbt_volume,$b0
+        db ctrlbt_duration,40
+        db $3f
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+        db ctrlbt_duration,10
+        db ctrlbt_volume,$90
+        db $35
+	db ctrlbt_wait       
+        db ctrlbt_volume,$d0
+        db $3f
+	db ctrlbt_wait      
+
+                ; M 26
+
+        db ctrlbt_duration,46
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait
+        db ctrlbt_volume,$b0
+        db $3f
+        db ctrlbt_volume,$e0
+        db $3f
+        db ctrlbt_volume,$b0
+        db $3f
+	db ctrlbt_wait      
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait       
+        db ctrlbt_duration,10
+        db ctrlbt_volume,$90
+        db $35
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+
+                ; M 27
+
+        db ctrlbt_duration,46
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait
+        db ctrlbt_volume,$b0
+        db $3f
+        db ctrlbt_volume,$e0
+        db $3f
+        db ctrlbt_volume,$b0
+        db $3f
+	db ctrlbt_wait      
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait       
+        db ctrlbt_volume,$90
+        db ctrlbt_duration,10
+        db $35
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+
+                ; M 28
+
+        db ctrlbt_duration,46
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait
+        db ctrlbt_volume,$b0
+        db $3f
+        db ctrlbt_volume,$e0
+        db $3f
+        db ctrlbt_volume,$b0
+        db ctrlbt_duration,40
+        db $3f
+	db ctrlbt_wait      
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait       
+        db ctrlbt_duration,10
+        db ctrlbt_volume,$90
+        db $35
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+
+                ; M 29
+
+        db ctrlbt_duration,46
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait
+        db ctrlbt_volume,$b0
+        db $3f
+	db ctrlbt_wait      
+        db ctrlbt_volume,$b0
+        db $3f
+	db ctrlbt_wait      
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait      
+        db ctrlbt_volume,$90
+        db ctrlbt_duration,10
+        db $35
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+
+                ; M 30
+
+        db ctrlbt_duration,40
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait
+        db ctrlbt_volume,$b0
+        db $3f
+        db ctrlbt_volume,$e0
+        db $3f
+        db ctrlbt_volume,$b0
+        db $3f
+	db ctrlbt_wait      
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait       
+        db ctrlbt_volume,$90
+        db ctrlbt_duration,10
+        db $35
+	db ctrlbt_wait       
+        db ctrlbt_volume,$d0
+        db $3f
+	db ctrlbt_wait      
+
+                ; M 31
+
+        db ctrlbt_duration,40
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait
+        db ctrlbt_volume,$b0
+        db $3f
+	db ctrlbt_wait      
+        db ctrlbt_volume,$b0
+        db $3f
+	db ctrlbt_wait      
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait       
+        db ctrlbt_volume,$90
+        db ctrlbt_duration,10
+        db $35
+	db ctrlbt_wait       
+        db ctrlbt_volume,$d0
+        db $3f
+        db ctrlbt_volume,$b0
+        db $3f
+
+                ; M 32
+
+        db ctrlbt_duration,40
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait
+        db ctrlbt_volume,$b0
+        db $3f
+	db ctrlbt_wait      
+        db ctrlbt_volume,$b0
+        db $3f
+	db ctrlbt_wait      
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait       
+        db ctrlbt_volume,$80
+        db ctrlbt_duration,10
+        db $35
+	db ctrlbt_wait       
+        db ctrlbt_volume,$d0
+        db $3f
+	db ctrlbt_wait      
+
+                ; M 33
+
+        db ctrlbt_duration,40
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait
+        db ctrlbt_volume,$b0
+        db $3f
+        db ctrlbt_volume,$e0
+        db $3f
+
+	db ctrlbt_track_loop
+
+;-----------------------------------------
+
+mididevil_tr_4_pt_03:
+
+                ; M 33.2
+
+        db ctrlbt_hold_mode,01
+        db ctrlbt_volume,$f0
+        db ctrlbt_duration,50
+        db $40+$25
+	db ctrlbt_wait
+        db $40+$25
+	db ctrlbt_wait
+        db ctrlbt_volume,$90
+        db $34
+	db ctrlbt_wait      
+        db ctrlbt_volume,$b0
+        db $3f
+	db ctrlbt_wait       
+
+                ; M 34
+
+        db ctrlbt_volume,$c0
+        db $3f
+	db ctrlbt_wait
+        db ctrlbt_volume,$90
+        db $34
+	db ctrlbt_wait      
+        db ctrlbt_volume,$f0
+        db $40+$25
+	db ctrlbt_wait      
+        db ctrlbt_volume,$c0
+        db $3f
+	db ctrlbt_wait       
+        db ctrlbt_volume,$90
+        db $34
+	db ctrlbt_wait       
+        db ctrlbt_volume,$d0
+        db $3f
+	db ctrlbt_wait
+
+                ; M 35
+
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait
+        db ctrlbt_volume,$90
+        db $34
+	db ctrlbt_wait      
+        db ctrlbt_volume,$f0
+        db $40+$25
+	db ctrlbt_wait      
+        db $40+$25
+	db ctrlbt_wait       
+        db ctrlbt_duration,30
+        db ctrlbt_volume,$90
+        db $34
+	db ctrlbt_wait       
+        db ctrlbt_volume,$d0
+        db $3f
+	db ctrlbt_wait
+
+                ; M 36
+
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait
+        db ctrlbt_duration,10
+        db $3f
+	db ctrlbt_wait      
+        db ctrlbt_volume,$f0
+        db ctrlbt_duration,50
+        db $40+$25
+	db ctrlbt_wait      
+        db ctrlbt_volume,$c0
+        db $3f
+	db ctrlbt_wait       
+        db ctrlbt_volume,$90
+        db $34
+	db ctrlbt_wait       
+        db ctrlbt_volume,$d0
+	db $3f
+	db ctrlbt_wait
+
+                ; M 37
+
+        db ctrlbt_duration,10
+        db ctrlbt_volume,$f0
+        db $40+$25
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+        db ctrlbt_duration,50
+        db ctrlbt_volume,$f0
+        db $3d
+	db ctrlbt_wait      
+        db ctrlbt_volume,$c0
+        db $3d
+	db ctrlbt_wait       
+        db ctrlbt_volume,$90
+        db ctrlbt_duration,10
+        db $35
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait
+
+                ; M 38
+
+        db ctrlbt_duration,50
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait
+        db ctrlbt_volume,$90
+	db $34
+	db ctrlbt_wait      
+        db ctrlbt_volume,$f0
+        db $40+$25
+	db ctrlbt_wait      
+        db ctrlbt_volume,$c0
+        db $3f
+	db ctrlbt_wait       
+        db ctrlbt_volume,$90
+        db $34
+	db ctrlbt_wait       
+        db ctrlbt_volume,$d0
+	db $3f
+	db ctrlbt_wait
+
+                ; M 39
+
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait
+        db ctrlbt_volume,$c0
+        db $3f
+	db ctrlbt_wait
+        db ctrlbt_volume,$f0
+        db $40+$25
+	db ctrlbt_wait      
+        db $40+$25
+	db ctrlbt_wait       
+        db ctrlbt_volume,$90
+        db $35
+	db ctrlbt_wait       
+        db ctrlbt_volume,$d0
+        db ctrlbt_duration,30
+        db $3f
+	db ctrlbt_wait      
+
+                ; M 40
+
+        db ctrlbt_duration,50
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait
+        db ctrlbt_volume,$90
+        db $34
+	db ctrlbt_wait      
+        db ctrlbt_volume,$f0
+        db $40+$25
+	db ctrlbt_wait      
+        db ctrlbt_volume,$c0
+        db $3f
+	db ctrlbt_wait       
+        db ctrlbt_volume,$90
+        db $35
+	db ctrlbt_wait       
+        db $3f
+	db ctrlbt_wait      
+
+                ; M 41
+
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait
+        db ctrlbt_volume,$90
+        db $34
+	db ctrlbt_wait
+        db ctrlbt_volume,$f0
+        db $40+$25
+	db ctrlbt_wait      
+        db $40+$25
+	db ctrlbt_wait       
+        db ctrlbt_volume,$90
+        db $35
+	db ctrlbt_wait       
+        db $3f
+	db ctrlbt_wait       
+
+                ; M 42
+
+        db ctrlbt_duration,30
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait
+        db ctrlbt_volume,$b0
+        db $3f
+	db ctrlbt_wait
+        db ctrlbt_volume,$f0
+        db $40+$25
+	db ctrlbt_wait      
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait       
+        db ctrlbt_volume,$90
+        db $35
+	db ctrlbt_wait       
+        db $3f
+	db ctrlbt_wait       
+
+                ; M 43
+
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait
+        db ctrlbt_volume,$90
+        db $34
+	db ctrlbt_wait      
+        db ctrlbt_volume,$f0
+        db $40+$25
+	db ctrlbt_wait     
+        db $40+$25
+	db ctrlbt_wait       
+        db ctrlbt_volume,$90
+        db $35
+	db ctrlbt_wait       
+        db ctrlbt_volume,$d0
+        db $3f
+	db ctrlbt_wait      
+
+                ; M 44
+
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait
+        db ctrlbt_volume,$90
+        db $34
+	db ctrlbt_wait
+        db ctrlbt_volume,$f0
+        db $40+$25
+	db ctrlbt_wait      
+        db ctrlbt_volume,$c0
+        db $3f
+	db ctrlbt_wait       
+        db ctrlbt_volume,$a0
+        db $34
+	db ctrlbt_wait       
+        db ctrlbt_volume,$d0
+        db $3f
+	db ctrlbt_wait      
+
+                ; M 45
+
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait
+        db ctrlbt_volume,$c0
+        db $3f
+	db ctrlbt_wait      
+        db ctrlbt_volume,$f0
+        db $40+$25
+	db ctrlbt_wait      
+        db $40+$25
+	db ctrlbt_wait       
+        db ctrlbt_volume,$b0
+        db ctrlbt_duration,36
+        db $34
+	db ctrlbt_wait       
+        db ctrlbt_volume,$90
+        db $34
+	db ctrlbt_wait       
+
+                ; M 46
+
+        db ctrlbt_duration,40
+        db ctrlbt_volume,$c0
+        db $34
+        db ctrlbt_volume,$80
+        db $34
+        db ctrlbt_volume,$b0
+        db $34
+        db ctrlbt_volume,$90
+        db $34
+
+	db ctrlbt_track_loop
+
+;-----------------------------------------------
+
+mididevil_tr_4_pt_04:
+
+                ; M 46.2
+
+        db ctrlbt_volume,$f0
+        db ctrlbt_hold_mode,00
+        db ctrlbt_duration,06
+        db $40+$25
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait       
+
+                ; M 47
+
+        db ctrlbt_volume,$c0
+        db $40+$2d
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait       
+        db $40+$25
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait
+
+                ; M 48
+
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+        db $40+$25
+	db ctrlbt_wait       
+        db ctrlbt_volume,$d0
+        db $40+$25
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 49
+
+        db ctrlbt_volume,$c0
+        db $40+$2d
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait      
+        db ctrlbt_volume,$f0
+        db $40+$25
+	db ctrlbt_wait       
+        db ctrlbt_volume,$c0
+        db $40+$25
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait
+
+                ; M 50
+
+        db ctrlbt_volume,$90
+        db $35
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+
+        db ctrlbt_hold_mode,01
+	db ctrlbt_track_loop
+
+;------------------------------------------
+
+mididevil_tr_4_pt_05:
+
+                ; M 1
+
+        db ctrlbt_volume,$f0
+        db ctrlbt_hold_mode,00
+        db ctrlbt_duration,0
+	db ctrlbt_note_off
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+        db ctrlbt_volume,$e0
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait
+
+                ; M 2
+
+
+        db ctrlbt_volume,$c0
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+        db ctrlbt_volume,$f0
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait
+
+                ; M 3
+
+        db ctrlbt_volume,$f0
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+        db ctrlbt_volume,$f0
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait
+
+                ; M 4
+
+        db ctrlbt_volume,$c0
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+        db ctrlbt_volume,$f0
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait
+
+                ; M 5
+
+        db ctrlbt_volume,$f0
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+        db ctrlbt_volume,$f0
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+        db ctrlbt_volume,$c0
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait
+
+                ; M 6
+
+        db ctrlbt_volume,$f0
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+        db ctrlbt_volume,$f0
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait
+
+                ; M 7
+
+        db ctrlbt_volume,$f0
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+        db ctrlbt_volume,$b0
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+        db ctrlbt_volume,$c0
+        db $35
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+
+                ; M 8
+
+        db ctrlbt_volume,$90
+        db $35
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+
+	db ctrlbt_track_loop
+
+;--------------------------------------------
+
+mididevil_tr_4_pt_06:
+
+                ; M 63.2
+
+        db ctrlbt_volume,$f0
+        db ctrlbt_hold_mode,00
+        db ctrlbt_duration,00
+        db $40+$25
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait       
+
+                ; M 64
+
+        db ctrlbt_volume,$c0
+        db $40+$2d
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait
+
+                ; M 65
+
+        db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait       
+        db ctrlbt_volume,$d0
+        db $40+$25
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 66
+
+        db ctrlbt_volume,$c0
+        db $40+$2d
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait       
+        db ctrlbt_volume,$f0
+        db $40+$25
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait
+
+
+                ; M 67
+
+        db ctrlbt_volume,$c0
+        db $40+$2d
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait       
+        db ctrlbt_volume,$f0
+        db $40+$25
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait
+
+                ; M 68
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+        db $40+$25
+	db ctrlbt_wait       
+        db ctrlbt_volume,$d0
+        db $40+$25
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 69
+
+        db ctrlbt_volume,$c0
+        db $40+$2d
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait      
+        db ctrlbt_volume,$f0
+        db $40+$25
+	db ctrlbt_wait       
+        db ctrlbt_volume,$c0
+        db $40+$25
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait
+
+                ; M 70
+
+        db ctrlbt_volume,$90
+        db $35
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+
+	db ctrlbt_auto_panner,%11_10_11_01,0
+        db ctrlbt_hold_mode,01
+	db ctrlbt_track_loop
+
+;---------------------------------------------
+
+mididevil_tr_4_pt_07:
+
+                ; M 70.2
+
+	db ctrlbt_volume,$f0
+        db ctrlbt_hold_mode,00
+        db ctrlbt_duration,00
+	db ctrlbt_auto_panner,%11_11_00_00,1
+
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$0c,$40
+	db $25
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait       
+
+                ; M 71
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_volume,$b0
+	db $40+$2d
+	db ctrlbt_wait
+	db ctrlbt_wait    
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 72
+
+        db $3f
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_volume,$f0
+	db $25
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 73
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait      
+	db ctrlbt_volume,$b0
+	db $40+$2d
+	db ctrlbt_wait      
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+
+                ; M 74
+
+        db $3f
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait      
+	db ctrlbt_volume,$f0
+	db $25
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 75
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_volume,$b0
+	db $40+$2d
+	db ctrlbt_wait
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 76
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_volume,$f0      
+	db $25
+	db ctrlbt_wait      
+	db ctrlbt_wait     
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait       
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 77
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait    
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 78
+
+        db $3f
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db $25
+	db ctrlbt_wait
+	db ctrlbt_wait    
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 79
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_volume,$b0      
+	db $40+$2d
+	db ctrlbt_wait
+	db ctrlbt_wait    
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 80
+
+        db $3f
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_volume,$f0
+	db $25
+	db ctrlbt_wait
+	db ctrlbt_wait    
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 81
+
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait    
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 82
+
+        db $3f
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db $25
+	db ctrlbt_wait
+	db ctrlbt_wait    
+	db ctrlbt_wait       
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 83
+
+	db ctrlbt_volume,$b0
+	db $40+$2d
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+                ; M 84
+
+	db ctrlbt_auto_panner,%11_10_11_01,0
+	db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait      
+	db ctrlbt_volume,$b0
+        db $3f
+	db ctrlbt_wait
+	db ctrlbt_wait    
+	db ctrlbt_wait       
+	db ctrlbt_volume,$f0
+        db $3f
+	db ctrlbt_wait
+	db ctrlbt_wait
+	db ctrlbt_wait
+
+
+        db ctrlbt_vibrato_reset
+	db ctrlbt_vibrato,$00,$00
+        db ctrlbt_transpose,00
+	db ctrlbt_track_loop
+
+        end
+
+;-----------------------------------------------
